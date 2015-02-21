@@ -11,7 +11,7 @@ var exportCss= require("./html2css").html2css;
 var senroMerge = require("./senroMerge").senroMerge;
 var senroLabel = require("./senroLabel."+senroConfig['senroLabel']['version']).senroLabel;
 var senroBat= require("./senroBat").senroBat;
-var PORT= 22;
+var PORT= 3001;
 
 var server = http.createServer(function (request, response) {
     var urlObj=url.parse(request.url ),
