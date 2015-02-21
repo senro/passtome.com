@@ -11,7 +11,7 @@ var exportCss= require("./html2css").html2css;
 var senroMerge = require("./senroMerge").senroMerge;
 var senroLabel = require("./senroLabel."+senroConfig['senroLabel']['version']).senroLabel;
 var senroBat= require("./senroBat").senroBat;
-var PORT= 3001;
+var PORT= 80;
 
 var server = http.createServer(function (request, response) {
     var urlObj=url.parse(request.url ),
@@ -21,7 +21,7 @@ var server = http.createServer(function (request, response) {
         realPath,
         inputCodeUrl,
         exporJsontUrl;
-
+    console.log( urlObj);
     if(pathname=='/exportCustom'){
 
             var exportList=paramsStr?JSON.parse(decodeURIComponent(paramsStr)):{};
@@ -207,7 +207,7 @@ var server = http.createServer(function (request, response) {
 
     }else{
         realPath = "static" + pathname;
-
+        console.log('realPath:'+realPath);
         fs.readFile(realPath, "binary", function (err, file) {
 
             if (err) {
