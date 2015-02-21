@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>controlPop</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+
+        body{
+            background: url(/images/bg.jpg) no-repeat;
+        }
+        img{
+            border: 0;
+        }
+            /*gallery css*/
+        .gallery{
+            /*display: none;*/
+            visibility: hidden;
+            position: absolute;
+            width: 882px;
+            padding: 10px;
+            background-color: #1f1b18;
+        }
+        .gallery-arrow{
+            position: absolute;
+            width: 28px;
+            height: 55px;
+            /*background: url(/images/gallery-arrow.gif) no-repeat;*/
+            z-index: 5;
+            outline: none;
+        }
+        .gallery-arrow-left{
+            left: 10px;
+            top: 265px;
+            background: url(/images/leftBtn.jpg) no-repeat;
+        }
+        .gallery-arrow-right{
+            right: 7px;
+            top: 264px;
+            background: url(/images/rightBtn.jpg) no-repeat;
+        }
+
+        .gallery-bigPic{
+            float: left;
+            width: 885px;
+            height: 557px;
+            color: #666;
+            text-decoration: none;
+            border: 0;
+            outline: none;
+        }
+        .gallery-bigPic img{
+            width: 885px;
+            height: 557px;
+        }
+        .gallery-bigContainer{
+            position: relative;
+            width: 885px;
+            height: 557px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-top: 34px;
+        }
+        .gallery-bigPicWrap{
+            position: absolute;
+            width: 999999px;
+            height: 557px;
+        }
+        .gallery-text{
+            width: 746px;
+            margin: 15px auto 0 auto;
+            color: #606060;
+            font-size: 14px;
+        }
+        .gallery-smallContainer{
+            width: 885px;
+        }
+        .gallery-smallPicContainer{
+            position: relative;
+            height: 115px;
+            overflow: hidden;
+        }
+        .gallery-smallPicWrap{
+            position: absolute;
+            width: 9999px;
+            height: 115px;
+            margin-left: -5px;
+            padding-top: 5px;
+        }
+        .gallery-smallPic{
+            position: relative;
+            float: left;
+            width: 171px;
+            height: 108px;
+            margin-left: 5px;
+            outline: none;
+            border: 0;
+        }
+        .gallery-smallPic img{
+            width: 171px;
+            height: 108px;
+        }
+        .gallery-smallPicSlider{
+            position: relative;
+            height: 13px;
+            margin-top: 10px;
+        }
+        .thumb_current{
+            position: absolute;
+            border: 2px solid #B06D02;
+            z-index: 100;
+        }
+        .gallery-SliderLine{
+            width: 100%;
+            height: 2px;
+            background-color: #5b4d33;
+            position: absolute;
+            top: 6px;
+            overflow: hidden;
+        }
+        .gallery-SliderCube{
+            position: absolute;
+            width: 80px;
+            height: 13px;
+            background-color: #ac905a;
+            overflow: hidden;
+        }
+        .video{
+            left:1000px;
+        }
+        .box{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+        .popClose{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: -50px;
+            top:0;
+            background-color: red;
+        }
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .mask{
+            background-color: #000;
+            /*background: #21abe7 url(/images/bg.jpg) no-repeat;*/
+            opacity: 0.9;
+            filter: alpha(opacity=90);
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <a class="box" id="box" href="javascript:;"></a>
+</div>
+
+<div class="mask"></div>
+
+<!--图片图集开始-->
+<div class="gallery" data-name="ammoUp">
+    <a class="gallery-arrow gallery-arrow-left" href="javascript:;"></a>
+    <a class="gallery-arrow gallery-arrow-right" href="javascript:;"></a>
+    <a class="popClose gallery-close" href="javascript:;"></a>
+    <div class="gallery-bigContainer">
+        <div class="gallery-bigPicWrap clearfix">
+
+            <a class="gallery-bigPic" href="http://www.baidu.com">
+                <img lazy="/images/pics/1-b/b1.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b2.jpg" src="" title="B2C" />
+                B2C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b3.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b4.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b5.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b6.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b7.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b8.jpg" src="" title="B1C" />
+                B1C
+            </a>
+            <a class="gallery-bigPic" href="javascript:;">
+                <img lazy="/images/pics/1-b/b9.jpg" src="" title="B1C" />
+                B1C
+            </a>
+
+        </div>
+    </div>
+
+    <div class="gallery-smallContainer">
+        <div class="gallery-smallPicContainer">
+            <div class="gallery-smallPicWrap clearfix">
+
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/1.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/2.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/3.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/4.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/5.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/6.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/7.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/8.jpg" src="" title="B1C" />
+                </a>
+                <a class="gallery-smallPic" href="javascript:;">
+                    <img lazy="/images/pics/1-s/9.jpg" src="" title="B1C" />
+                </a>
+
+            </div>
+        </div>
+        <div class="gallery-smallPicSlider">
+            <div class="gallery-SliderLine"></div>
+            <a class="gallery-SliderCube" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+<!--图片图集结束-->
+
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['drag','mouseWheel','video']),
+        $gallery=$('.gallery'),
+        $galleryBtn_left=$('.gallery-arrow-left'),
+        $galleryBtn_right=$('.gallery-arrow-right'),
+        $galleryBigList=$('.gallery-bigPicWrap'),
+        $gallerythumbList=$('.gallery-smallPicWrap'),
+        $gallerySliderCube=$( ".gallery-SliderCube");
+
+    $gallery.each(function(index){
+        senro.sliderLR($galleryBigList.eq(index),$galleryBtn_left.eq(index),$galleryBtn_right.eq(index),$gallerythumbList.eq(index),$galleryBtn_left.eq(index),$galleryBtn_right.eq(index),$gallerySliderCube.eq(index));
+    });
+    //senro.controlPop('show',$gallery,$('.popClose'),$('.mask'));
+    //senro.controlPop('hide',$gallery,$('.popClose'),$('.mask'));
+    $('.box').click(function(){
+        senro.controlPop('show',$gallery,$('.popClose'),null,'fast');
+        //senro.controlPop('show',$gallery,null,$('.mask'));
+        return false;
+    });
+//    $('.popClose').click(function(){
+//        senro.controlPop('hide',$gallery,null,$('.mask'));
+//        //senro.controlPop('show',$gallery,null,$('.mask'));
+//        return false;
+//    });
+
+</script>
+</body>
+</html>

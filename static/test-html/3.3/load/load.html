@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>load</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+        }
+        .loader{
+            width: 300px;
+            height: 10px;
+            margin:0 auto;
+            background-color: #666;
+        }
+        .loader-bar{
+            width: 0;
+            height: 10px;
+            background-color: #ffffff;
+        }
+        .percent{
+            color: #fff;
+            width: 300px;
+            margin: 200px auto 0;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<div class="bg">
+    <div class="percent"></div>
+    <div class="loader">
+        <div class="loader-bar"></div>
+    </div>
+    <div id="video"></div>
+</div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['testHtml5','preload','video']);
+
+    senro.checkHtml5('webgl',function(){
+        senro.console('support webgl');
+//        var manifest = [
+//            {src:"../../media/test.flv", id:"flv"},
+//            {src:"../../images/bg.jpg", id:"bg"},
+//            {src:"../../images/btn.jpg", id:"btn"},
+//            {src:"../../js/login.js", id:"login"}
+//        ];
+        var manifest = [
+            //{src:"../../media/test.mp4",id:'video'},
+            //{src:"../../media/Wedding Bell.ogg",id:"music"},
+            //"../../images/bg.jpg",
+            "/images/btn.jpg"
+            //"../../js/modernizr.custom.testHtml5.js",
+            //"../../other-projects/greensock-v12-js/src/minified/plugins/CSSPlugin.min.js",
+            //"../../other-projects/greensock-v12-js/src/minified/TweenLite.min.js"
+        ];
+        senro.load(manifest,fileLoad,progress,complete);
+        function fileLoad(event){
+            senro.console(event.result);
+        }
+        function progress(p){
+            //senro.console(p);
+            $('.percent').html(p+'%');
+            $('.loader-bar').css('width',p+'%');
+        }
+        function complete(e){
+//            senro.console(TweenLite);
+//            senro.console(modernizr);
+            //e.getResult('music').autoplay='true';
+            //e.getResult('music').play();
+            //senro.addVideo('video', e.getResult('video'));
+        }
+    },function(){
+        alert('webGLnotOk');
+    });
+
+</script>
+</body>
+</html>

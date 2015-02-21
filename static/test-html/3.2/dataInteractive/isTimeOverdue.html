@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderLR,senro sliderLR"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>isTimeOverdue</title>
+
+</head>
+<body>
+距离2015-08-14 00:00:00还有
+<span class="timeBox day"></span>天，
+<span class="timeBox hour"></span>小时，
+<span class="timeBox min"></span>分，
+<span class="timeBox sec"></span>秒
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+
+    senro.getCurrentTime(function(time){
+        senro.isTimeOverdue(time.fullDate,'2015-08-14 00:00:00',function(lastTime){
+            $('.day').html(lastTime.day);
+            $('.hour').html(lastTime.hour);
+            $('.min').html(lastTime.min);
+            $('.sec').html(lastTime.sec);
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>carouselSlider</title>
+    <meta name="keywords" content="大三国志，大三国，三国游戏，三国网页游戏" />
+    <meta name="description" content="群雄并起 问鼎天下 大三国志 10月23日 新版本问世 新活动 新惊喜 天下等你来问鼎" />
+    <meta name="copyright" content="苏州蜗牛数字科技股份有限公司"/>
+    <meta name="author" content="584233821@qq.com(senro)"/>
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/test-carouselSlider.css"/>
+    <!--[if IE 6]>
+    <script src="http://static.woniu.com/script/iepng/iepng.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix('.iePng');</script>
+    <![endif]-->
+    <style>
+        .item0{
+            width: 180px;
+            height: 180px;
+            left: -67px;
+            top: 71px;
+            z-index: 10;
+        }
+        .item6{
+            width: 180px;
+            height: 180px;
+            left: 623px;
+            top: 71px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<script charset="utf-8" id="pub-header" register="http://www.woniu.com/account/register/?gameid=20&pagename=GW.DSG.TL&goto=http://dsg.woniu.com/actacc/" src="http://static.woniu.com/header_tl/pub-header.js"></script>
+<div class="bg">
+    <div class="container">
+        <div class="header">
+            <a class="logo" target="_blank" href="http://dsg.woniu.com"></a>
+            <div class="nav">
+                <a class="navBtn navBtn1 hiddenText" target="_blank" href="http://dsg.woniu.com/main.html" title="官网首页">官网首页</a>
+                <a class="navBtn navBtn2 hiddenText" target="_blank" href="http://imprest.woniu.com/prepaid/ways/20" title="快速充值">快速充值</a>
+                <a class="navBtn navBtn3 hiddenText" target="_blank" href="http://club.woniu.com/thread.php?fid=1045" title="游戏论坛">游戏论坛</a>
+            </div>
+            <a class="enterGame iePng hiddenText" href="http://dsg.woniu.com/serverlist/sso/" target="_blank" title="进入游戏">进入游戏</a>
+        </div>
+        <!--方法结构开始-->
+        <div class="slider">
+            <a class="sliderBtn sliderBtnL iePng" hidefocus href="javascript:;"></a>
+            <a class="sliderBtn sliderBtnR iePng" hidefocus href="javascript:;"></a>
+            <div class="items">
+                <div class="item item0" data-mask="0.95" data-zindex="99">
+                    <div class="itemMask itemMask1"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider4.jpg"/>
+                    </a>
+                </div>
+                <div class="item item1" data-mask="0.85" data-zindex="100">
+                    <div class="itemMask itemMask1"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider4.jpg"/>
+                    </a>
+                </div>
+                <div class="item item2" data-mask="0.55" data-zindex="101">
+                    <div class="itemMask itemMask2"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider5.jpg"/>
+                    </a>
+                </div>
+                <div class="item item3" data-mask="0" data-zindex="102">
+                    <div class="itemMask itemMask3"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider1.jpg"/>
+                    </a>
+                </div>
+                <div class="item item4" data-mask="0.55" data-zindex="101">
+                    <div class="itemMask itemMask4"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider2.jpg"/>
+                    </a>
+                </div>
+                <div class="item item5" data-mask="0.85" data-zindex="100">
+                    <div class="itemMask itemMask5"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider3.jpg"/>
+                    </a>
+                </div>
+                <div class="item item6" data-mask="0.95" data-zindex="99">
+                    <div class="itemMask itemMask5"></div>
+                    <a class="itemLink" href="#">
+                        <img class="itemImg" src="/images/slider3.jpg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--方法结构结束-->
+        <div class="main clearfix">
+            <a class="btn btn1" href="#" title="资料一"></a>
+            <a class="btn btn2" href="#" title="资料二"></a>
+            <a class="btn btn3" href="#" title="资料三"></a>
+            <a class="btn btn4" href="#" title="资料四"></a>
+        </div>
+    </div>
+</div>
+<script charset="utf-8" id="pub-footer" gamename="大三国*志" src="http://static.woniu.com/footer_dl/pub-footer.js?v=2"></script>
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+//    方法js开始
+    senro.carouselSlider($('.item'),$('.sliderBtnL'),$('.sliderBtnR'));
+//    方法js结束
+</script>
+</body>
+</html>

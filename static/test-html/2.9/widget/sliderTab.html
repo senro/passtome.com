@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderTab,senro sliderTab" />
+    <meta name="description" content="senro.js, make fwd simple!" />
+
+    <title>sliderTab</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+        /*sliderTab方法样式开始*/
+        .sliderTab {
+            height: 306px;
+            overflow: hidden;
+            width: 215px;
+        }
+        .sliderTab .tabBtn {
+            background-color: blue;
+            color: #754400;
+            float: left;
+            height: 35px;
+            line-height: 35px;
+            text-decoration: none;
+            text-indent: 37px;
+            width: 106px;
+        }
+        .sliderTab .tabBtn :hover{
+            background-color: green;
+        }
+        .sliderTab .tabCont {
+            background-color: #EAD9C0;
+            float: left;
+            height: 271px;
+            width: 214px;
+        }
+        .sliderTab .current{
+            background-color: yellow;
+        }
+        /*sliderTab方法样式结束*/
+    </style>
+</head>
+<body>
+<!--sliderTab方法结构开始-->
+<div class="sliderTab clearfix">
+    <a class="tabBtn" href="javascript:;">新浪微博</a>
+    <a class="tabBtn" href="javascript:;">腾讯微博</a>
+    <div class="tabCont">
+        新浪微博
+    </div>
+    <div class="tabCont">
+        腾讯微博
+    </div>
+</div>
+<!--sliderTab方法结构结束-->
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+//  sliderTab方法js开始
+    senro.sliderTab($('.sliderTab .tabBtn'),$('.sliderTab .tabCont'),'current');
+//  sliderTab方法js结束
+</script>
+</body>
+</html>

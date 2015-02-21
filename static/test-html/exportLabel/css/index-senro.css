@@ -1,0 +1,374 @@
+/*this css is exported by senroLabel © www.passtome.com/senroLabel/*/
+/*sliderLR方法样式开始*/
+        .sliderLR{
+            position: relative;
+            width: 500px;
+            padding: 10px;
+            background-color: #1f1b18;
+            overflow: hidden;
+        }
+        .sliderLR .arrow{
+            position: absolute;
+            width: 28px;
+            height: 55px;
+            top: 50%;
+            margin-top: -23px;
+            /*background: url(../images/arrow.gif) no-repeat;*/
+            z-index: 5;
+            outline: none;
+        }
+        .sliderLR .arrowLeft{
+            left: 10px;
+            background: url(../images/leftBtn.jpg) no-repeat;
+        }
+        .sliderLR .arrowRight{
+            right: 10px;
+            background: url(../images/rightBtn.jpg) no-repeat;
+        }
+        /*大图*/
+        .sliderLR .itemStag{
+            position: relative;
+            height: 400px;/*大图容器高度*/
+            margin: 34px auto 0 auto;
+            overflow: hidden;
+        }
+        .sliderLR .itemWrap{
+            position: absolute;
+            width: 999999px;
+        }
+        .sliderLR .item{
+            float: left;
+            width: 500px;/*大图宽度*/
+            height: 400px;/*大图高度*/
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+            outline: none;
+            position: static;
+        }
+        .sliderLR .item img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+        /*大图结束*/
+        /*缩略图*/
+        .sliderLR .thumbs{
+            width: 100%;
+        }
+        .sliderLR .thumbsStag{
+            position: relative;
+            height: 80px;/*缩略图容器高度*/
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .sliderLR .thumbsWrap{
+            position: absolute;
+            width: 9999px;
+            margin-left: -5px;
+        }
+        .sliderLR .thumbItem{
+            position: relative;
+            float: left;
+            width: 120px;/*缩略图宽度*/
+            height: 80px;/*缩略图高度*/
+            /*border: 1px solid #fff;*/
+            margin-left: 5px;
+            outline: none;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .sliderLR .thumbItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+        /*缩略图结束*/
+        .sliderLR .thumb_current{
+            position: absolute;
+            border: 2px solid #B06D02;
+            z-index: 100;
+            overflow: hidden;
+        }
+        /*滚动条*/
+        .sliderLR .scroll{
+            position: relative;
+            height: 13px;
+            margin-top: 10px;
+        }
+        .sliderLR .scrollLine{
+            width: 100%;
+            height: 2px;
+            background-color: #5b4d33;
+            position: absolute;
+            top: 6px;
+            overflow: hidden;
+        }
+        .sliderLR .scrollCube{
+            position: absolute;
+            width: 80px;
+            height: 13px;
+            background-color: #ac905a;
+            overflow: hidden;
+        }
+        /*滚动条结束*/
+        /*sliderLR方法样式结束*/
+/*simpleSliderLR方法样式开始*/
+        .simpleSliderLR1{
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        .simpleSliderLR1 .itemStag{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .simpleSliderLR1 .itemWrap{
+            position: absolute;
+            width: 9999px;
+            height: 200px;
+        }
+        .simpleSliderLR1 .itemImg{
+            float: left;
+            width: 300px;
+            height: 200px;
+        }
+        .simpleSliderLR1 .arrow{
+            background: url(../images/arrow.gif) no-repeat 0 0;
+            cursor: pointer;
+            height: 85px;
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 50px;
+            display: block;
+            outline: none;
+        }
+        .simpleSliderLR1 .arrowLeft {
+            background-position: left top;
+            left: -63px;
+        }
+        .simpleSliderLR1 .arrowRight {
+            background-position: right top;
+            right: -63px;
+        }
+        /*simpleSliderLR方法样式结束*/
+/*simpleSliderLR方法样式开始*/
+        .simpleSliderLR2{
+            position: relative;
+            width: 400px;
+            height: 200px;
+        }
+        .simpleSliderLR2 .itemStag{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .simpleSliderLR2 .itemWrap{
+            position: absolute;
+            width: 9999px;
+            height: 200px;
+        }
+        .simpleSliderLR2 .itemImg{
+            float: left;
+            width: 400px;
+            height: 200px;
+        }
+        .simpleSliderLR2 .arrow{
+            background: url(../images/arrow.gif) no-repeat 0 0;
+            cursor: pointer;
+            height: 85px;
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 50px;
+            display: block;
+            outline: none;
+        }
+        .simpleSliderLR2 .arrowLeft {
+            background-position: left top;
+            left: -63px;
+        }
+        .simpleSliderLR2 .arrowRight {
+            background-position: right top;
+            right: -63px;
+        }
+        /*simpleSliderLR方法样式结束*/
+/*bigEye方法样式开始*/
+       .bigEye1 {
+           height: 200px;
+           overflow: hidden;
+           position: relative;
+           width: 300px;
+       }
+       .bigEye1 .item {
+           position: relative;
+           float: left;
+           height: 200px;
+           text-decoration: none;
+           width: 300px;
+       }
+       .bigEye1 .itemImg {
+           display: block;
+           height: 200px;
+           width: 100%;
+       }
+       .bigEye1 .itemText {
+           background-color: #C7BFB2;
+           color: #817054;
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           height: 20px;
+           line-height: 20px;
+           text-align: center;
+       }
+       .bigEye1 .dots {
+           bottom: 10px;
+           position: absolute;
+           right: 10px;
+           z-index: 100;
+       }
+       .bigEye1 .dot{
+           background: url(../images/dot-black.gif) no-repeat scroll 0 0;
+           display: inline-block;
+           height: 13px;
+           margin-left: 5px;
+           outline: medium none;
+           width: 13px;
+       }
+       .bigEye1 .dot_current {
+           background: url("../images/dot-orange.gif") no-repeat scroll 0 0;
+       }
+       /*bigEye方法样式结束*/
+/*simpleSliderLR方法样式开始*/
+        .simpleSliderLR3{
+            position: relative;
+            width: 500px;
+            height: 200px;
+        }
+        .simpleSliderLR3 .itemStag{
+            position: relative;
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .simpleSliderLR3 .itemWrap{
+            position: absolute;
+            width: 9999px;
+            height: 200px;
+        }
+        .simpleSliderLR3 .itemImg{
+            float: left;
+            width: 500px;
+            height: 200px;
+        }
+        .simpleSliderLR3 .arrow{
+            background: url(../images/arrow.gif) no-repeat 0 0;
+            cursor: pointer;
+            height: 85px;
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 50px;
+            display: block;
+            outline: none;
+        }
+        .simpleSliderLR3 .arrowLeft {
+            background-position: left top;
+            left: -63px;
+        }
+        .simpleSliderLR3 .arrowRight {
+            background-position: right top;
+            right: -63px;
+        }
+        /*simpleSliderLR方法样式结束*/
+/*marquee方法样式开始*/
+        .marqueeV{
+            width: 237px;
+            margin: 0 auto;
+        }
+        .marqueeV .itemStag{
+            height: 230px;
+            overflow: hidden;
+            margin-top: 12px;
+            border: 1px solid #fff;
+        }
+        .marqueeV .btn{
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            outline: none;
+            background-color: #fff;
+        }
+        .marqueeV .preBtn{
+            margin-bottom: 10px;
+        }
+        .marqueeV .nextBtn{
+            margin-top: 10px;
+        }
+        .marqueeV .itemTable{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .marqueeV .table td{
+            width: 79px;
+            height: 22px;
+        }
+        .marqueeV .itemWrap{
+            line-height: 25px;
+        }
+        .marqueeV .item{
+            /*margin-top: 5px;*/
+        }
+            /*marquee方法样式结束*/
+/*simpleSliderLR方法样式开始*/
+        .simpleSliderLR{
+            position: relative;
+            width: 605px;
+            height: 335px;
+        }
+        .simpleSliderLR .itemStag{
+            position: relative;
+            width: 605px;
+            height: 335px;
+            overflow: hidden;
+        }
+        .simpleSliderLR .itemWrap{
+            position: absolute;
+            width: 9999px;
+            height: 335px;
+        }
+        .simpleSliderLR .itemImg{
+            float: left;
+            width: 605px;
+            height: 335px;
+        }
+        .simpleSliderLR .arrow{
+            background: url(../images/arrow.gif) no-repeat 0 0;
+            cursor: pointer;
+            height: 85px;
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 50px;
+            display: block;
+            outline: none;
+        }
+        .simpleSliderLR .arrowLeft {
+            background-position: left top;
+            left: -63px;
+        }
+        .simpleSliderLR .arrowRight {
+            background-position: right top;
+            right: -63px;
+        }
+        /*simpleSliderLR方法样式结束*/
+

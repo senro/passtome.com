@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>carouselSlider</title>
+    <meta name="keywords" content="js,senro.js,senro.cn,carouselSlider,senro carouselSlider" />
+    <meta name="description" content="senro.js, make fwd simple!" />
+    <meta name="copyright" content="senro.cn"/>
+    <meta name="author" content="584233821@qq.com(senro)"/>
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <style>
+        body{
+            background-color: #000;
+        }
+        /*carouselSlider方法样式开始*/
+        .carouselSlider{
+            position: relative;
+            width: 732px;
+            height: 281px;
+            margin: 49px auto 0;
+        }
+        .carouselSlider .arrow{
+            position: absolute;
+            width: 63px;
+            height: 62px;
+            top: 118px;
+            outline: none;
+            background: url(/images/indexBtns.png) no-repeat 0 0;
+        }
+        .carouselSlider .arrowLeft{
+            background-position: 1px -138px;
+            left: -133px;
+        }
+        .carouselSlider .arrowRight{
+            background-position: -128px -138px;
+            right: -133px;
+        }
+        .carouselSlider .arrowLeft:hover{
+            background-position: -64px -139px;
+        }
+        .carouselSlider .arrowRight:hover{
+            background-position: -193px -138px;
+        }
+        .carouselSlider .arrowLeft:active{
+            background-position: -65px -138px;
+        }
+        .carouselSlider .arrowRight:active{
+            background-position: -192px -137px;
+        }
+        .carouselSlider .itemsWrap{
+            position: relative;
+        }
+        .carouselSlider .item{
+            position: absolute;
+            width: 264px;
+            height: 281px;
+            overflow: hidden;
+        }
+        .carouselSlider .itemMask{
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            position: absolute;
+        }
+        .carouselSlider .itemMask1,.itemMask5{
+            filter: alpha(opacity=85); /* internet explorer */
+            opacity: 0.85;           /* fx, safari, opera */
+        }
+        .carouselSlider .itemMask2,.itemMask4{
+            filter: alpha(opacity=55); /* internet explorer */
+            opacity: 0.55;           /* fx, safari, opera */
+        }
+        .carouselSlider .itemMask3{
+            filter: alpha(opacity=0); /* internet explorer */
+            opacity: 0;
+        }
+        .carouselSlider .item1{
+            width: 200px;
+            height: 210px;
+            left: 10px;
+            top: 54px;
+            z-index: 11;
+            visibility: hidden;
+        }
+        .carouselSlider .item2{
+            width: 224px;
+            height: 239px;
+            left: 107px;
+            top: 32px;
+            z-index: 12;
+        }
+        .carouselSlider .item3{
+            left: 233px;
+            z-index: 13;
+        }
+        .carouselSlider .item4{
+            width: 224px;
+            height: 239px;
+            left: 410px;
+            top: 32px;
+            z-index: 12;
+        }
+        .carouselSlider .item5{
+            width: 200px;
+            height: 210px;
+            left: 540px;
+            top: 54px;
+            z-index: 11;
+            visibility: hidden;
+        }
+        .carouselSlider .current{
+            cursor: pointer;
+            box-shadow: 30px 0 24px 0 rgba(0, 0, 0, 0.6), -30px 0 24px 0 rgba(0, 0, 0, 0.6);
+        }
+        .carouselSlider .itemImg{
+            width: 100%;
+            height: 100%;
+        }
+        .carouselSlider .item0{
+            width: 180px;
+            height: 180px;
+            left: -67px;
+            top: 71px;
+            z-index: 10;
+            visibility: hidden;
+        }
+        .carouselSlider .item6{
+            width: 180px;
+            height: 180px;
+            left: 623px;
+            top: 71px;
+            z-index: 10;
+            visibility: hidden;
+        }
+        /*carouselSlider方法样式结束*/
+    </style>
+</head>
+<body>
+
+<!--carouselSlider方法结构开始-->
+<div class="carouselSlider">
+    <a class="arrow arrowLeft iePng" hidefocus href="javascript:;"></a>
+    <a class="arrow arrowRight iePng" hidefocus href="javascript:;"></a>
+    <div class="itemsWrap">
+        <div class="item item0" data-mask="0.95">
+            <div class="itemMask itemMask1"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider4.jpg"/>
+            </a>
+        </div>
+        <div class="item item1" data-mask="0.85">
+            <div class="itemMask itemMask1"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider4.jpg"/>
+            </a>
+        </div>
+        <div class="item item2" data-mask="0.55">
+            <div class="itemMask itemMask2"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider5.jpg"/>
+            </a>
+        </div>
+        <div class="item item3" data-mask="0">
+            <div class="itemMask itemMask3"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider1.jpg"/>
+            </a>
+        </div>
+        <div class="item item4" data-mask="0.55">
+            <div class="itemMask itemMask4"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider2.jpg"/>
+            </a>
+        </div>
+        <div class="item item5" data-mask="0.85">
+            <div class="itemMask itemMask5"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider3.jpg"/>
+            </a>
+        </div>
+        <div class="item item6" data-mask="0.95">
+            <div class="itemMask itemMask5"></div>
+            <a class="itemLink" href="#">
+                <img class="itemImg" src="/images/slider3.jpg"/>
+            </a>
+        </div>
+    </div>
+</div>
+<!--carouselSlider方法结构结束-->
+
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+//    carouselSlider方法js开始
+    senro.carouselSlider($('.carouselSlider .item'),$('.carouselSlider .arrowLeft'),$('.carouselSlider .arrowRight'));
+//    carouselSlider方法js结束
+</script>
+</body>
+</html>

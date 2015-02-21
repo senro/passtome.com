@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>bigEye</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+       .mod-cont {
+           background-color: #EAD9C0;
+           height: 256px;
+           overflow: hidden;
+           width: 400px;
+           position: relative;
+       }
+       .exchangeSlider {
+           height: 247px;
+           margin-top: 10px;
+           overflow: hidden;
+           position: relative;
+           width: 400px;
+       }
+       .exchangeBtn {
+           float: left;
+           height: 247px;
+           text-decoration: none;
+           width: 400px;
+       }
+       .exchangeBtnImg {
+           display: block;
+           height: 225px;
+           width: 400px;
+       }
+       .exchangeBtn-txt {
+           background-color: #C7BFB2;
+           color: #817054;
+           display: block;
+           height: 20px;
+           line-height: 20px;
+           text-align: center;
+       }
+       .dots {
+           bottom: 10px;
+           position: absolute;
+           right: 10px;
+           top: 238px;
+           z-index: 100;
+       }
+       .dots .active {
+           background: url("../../images/dot-orange.gif") no-repeat scroll 0 0;
+       }
+       .dots a {
+           background: url("../../images/dot-black.gif") no-repeat scroll 0 0;
+           display: inline-block;
+           height: 13px;
+           margin-left: 5px;
+           outline: medium none;
+           width: 13px;
+       }
+    </style>
+</head>
+<body>
+<div class="mod-cont">
+    <div class="exchangeSlider" id="exchange-slider">
+        <div class="exchange-sliderWrap" id="exchange-sliderWrap">
+            <a href="javascript:;" data-video="http://att1.niucdn.com/hj/static/quality/1.flv"  data-type="video" class="exchangeBtn changeable">
+                <img class="exchangeBtnImg" src="../../images/exchangeBtnImg1.jpg"/>
+                                    <span class="exchangeBtn-txt">
+                                        《黑金》《龙之谷》中韩团队交流会
+                                    </span>
+            </a>
+            <a href="javascript:;" data-video="http://att1.niucdn.com/hj/static/quality/2.flv" data-type="video" class="exchangeBtn changeable">
+                <img class="exchangeBtnImg" src="../../images/exchangeBtnImg2.jpg"/>
+                                    <span class="exchangeBtn-txt">
+                                        全地图畅爽打击 《黑金》AMMO华丽变身
+                                    </span>
+            </a>
+            <a href="javascript:;" data-video="http://att1.niucdn.com/hj/static/quality/1.flv"  data-type="video" class="exchangeBtn changeable">
+                <img class="exchangeBtnImg" src="../../images/exchangeBtnImg1.jpg"/>
+                                    <span class="exchangeBtn-txt">
+                                        《黑金》《龙之谷》中韩团队交流会
+                                    </span>
+            </a>
+            <a href="javascript:;" data-video="http://att1.niucdn.com/hj/static/quality/2.flv" data-type="video" class="exchangeBtn changeable">
+                <img class="exchangeBtnImg" src="../../images/exchangeBtnImg2.jpg"/>
+                                    <span class="exchangeBtn-txt">
+                                        全地图畅爽打击 《黑金》AMMO华丽变身
+                                    </span>
+            </a>
+        </div>
+
+    </div>
+    <div class="dots" id="dots">
+        <a class="dot" href="javascript:;"></a>
+        <a class="dot" href="javascript:;"></a>
+        <a class="dot" href="javascript:;"></a>
+        <a class="dot" href="javascript:;"></a>
+    </div>
+</div>
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.7.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['MSClass']);
+
+    //big eye
+    senro.bigEye('exchange-slider','exchange-sliderWrap','dots');
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>bigEye</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+        /*bigEye方法样式开始*/
+       .bigEye {
+           height: /*height*/247px/*height*/;
+           margin-top: 10px;
+           overflow: hidden;
+           position: relative;
+           width: /*width*/400px/*width*/;
+       }
+       .bigEyeItem {
+           position: relative;
+           float: left;
+           height: /*height*/247px/*height*/;
+           text-decoration: none;
+           width: /*width*/400px/*width*/;
+       }
+       .bigEyeItemImg {
+           display: block;
+           height: /*height*/247px/*height*/;
+           width: 100%;
+       }
+       .bigEyeItemText {
+           background-color: #C7BFB2;
+           color: #817054;
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           height: 20px;
+           line-height: 20px;
+           text-align: center;
+       }
+       .bigEyeDots {
+           bottom: 10px;
+           position: absolute;
+           right: 10px;
+           z-index: 100;
+       }
+       .bigEyeDot{
+           background: url(/images/dot-black.gif) no-repeat scroll 0 0;
+           display: inline-block;
+           height: 13px;
+           margin-left: 5px;
+           outline: medium none;
+           width: 13px;
+       }
+       .bigEyeDot_current {
+           background: url("/images/dot-orange.gif") no-repeat scroll 0 0;
+       }
+       /*bigEye方法样式结束*/
+    </style>
+</head>
+<body>
+<!--bigEye方法结构开始-->
+<div class="bigEye">
+    <div class="bigEyeItemWrap">
+        <a href="javascript:;" class="bigEyeItem">
+            <img class="bigEyeItemImg" src="/images/exchangeBtnImg1.png"/>
+            <span class="bigEyeItemText">
+                《黑金》《龙之谷》中韩团队交流会
+            </span>
+        </a>
+        <a href="javascript:;" class="bigEyeItem">
+            <img class="bigEyeItemImg" src="/images/exchangeBtnImg2.png"/>
+            <span class="bigEyeItemText">
+                《黑金》《龙之谷》中韩团队交流会
+            </span>
+        </a>
+        <a href="javascript:;" class="bigEyeItem">
+            <img class="bigEyeItemImg" src="/images/exchangeBtnImg3.png"/>
+            <span class="bigEyeItemText">
+                《黑金》《龙之谷》中韩团队交流会
+            </span>
+        </a>
+    </div>
+    <div class="bigEyeDots">
+        <a class="bigEyeDot" href="javascript:;"></a>
+        <a class="bigEyeDot" href="javascript:;"></a>
+    </div>
+</div>
+<!--bigEye方法结构结束-->
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.1.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+//  bigEye方法js开始
+    //senro.bigEye($('.bigEyeItemWrap'),$('.bigEyeDots'),'bigEyeDot_current',null,'fade',true);
+
+    senro.bigEye({
+        items:$('.bigEyeItemWrap'),
+        dots:$('.bigEyeDots'),
+        current:'bigEyeDot_current',
+        transType:'fade',
+        autoPlay:true
+    });
+//  bigEye方法js结束
+</script>
+</body>
+</html>

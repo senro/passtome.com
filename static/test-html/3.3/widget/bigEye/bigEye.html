@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>bigEye</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <!--方法样式开始-->
+    <link rel="stylesheet" type="text/css" href="bigEye.css"/>
+    <!--方法样式结束-->
+</head>
+<body>
+<!--方法结构开始-->
+<div class="senro-bigEye">
+    <div class="itemWrap">
+        <a href="javascript:;" class="item">
+            <img class="itemImg" src="images/exchangeBtnImg1.png"/>
+            <span class="itemTxt">
+                《黑金》《龙之谷》中韩团队交流会
+            </span>
+        </a>
+        <a href="javascript:;" class="item">
+            <img class="itemImg" src="images/exchangeBtnImg2.png"/>
+            <span class="itemTxt">
+                《黑金》《龙之谷》中韩团队交流会
+            </span>
+        </a>
+        <a href="javascript:;" class="item">
+            <img class="itemImg" src="images/exchangeBtnImg2.png"/>
+            <span class="itemTxt">
+                《黑金》《龙之谷》中韩团队交流会
+            </span>
+        </a>
+    </div>
+    <div class="dots" id="dots">
+        <a class="dot" href="javascript:;"></a>
+        <a class="dot" href="javascript:;"></a>
+    </div>
+</div>
+<!--方法结构结束-->
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="Senro.2.8.bigEye.min.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+//    方法js开始
+    //big eye
+    senro.bigEye($('.senro-bigEye .itemWrap'),$('.dots'),'dot_current',null,'fade',true);
+//    方法js结束
+</script>
+</body>
+</html>

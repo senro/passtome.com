@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color: #000;
+        }
+        .bg{
+            width: 500px;
+            height: 2000px;
+            margin: 0 auto;
+            background: url(/images/bg.jpg) no-repeat;
+        }
+        .backTopBtn{
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            left:50%;
+            top:529px;
+            margin-left: 300px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+<div class="bg">
+    <a class="backTopBtn" href="javascript:;"></a>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.8.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    senro.backTop($('.backTopBtn'));
+    senro.fixedDomPos($('.backTopBtn'));
+
+</script>
+</body>
+</html>

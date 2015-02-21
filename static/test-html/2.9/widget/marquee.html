@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,marquee,senro marquee"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>marquee</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <style type="text/css">
+        body {
+            color: #c5ba78;
+            background-color: #000;
+            font: 12px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+        }
+        /*marquee方法样式开始*/
+        .marquee{
+
+        }
+        .marquee .marqueeWrap{
+            height: 230px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+        .marquee .arrow{
+            display: block;
+            height: 20px;
+            background: url(/images/arrow.gif) no-repeat center center;
+            margin-top: 22px;
+            outline: none;
+        }
+        .marquee .arrowPre{
+            background-position: center 0;
+        }
+        .marquee .arrowPre:hover{
+            background-position: center -38px;
+        }
+        .marquee .arrowNext{
+            background-position: center -18px;
+        }
+        .marquee .arrowNext:hover{
+            background-position: center -56px;
+        }
+
+        .marquee table{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .marquee table td{
+            width: 79px;
+            height: 22px;
+        }
+        /*marquee方法样式结束*/
+        /*marquee2*/
+        .marquee2{
+            width: 862px;
+            height: 100px;
+            margin: 0 auto;
+            border:1px solid #fff;
+        }
+        .arrow2{
+            float: left;
+            display: block;
+            width: 30px;
+            height: 20px;
+            background-color: #fff;
+        }
+        .marquee2 .marqueeWrap{
+            float: left;
+            width: 800px;
+            height: 50px;
+            border:1px solid #fff;
+            overflow: hidden;
+        }
+        .marquee2 .marqueeWrap ul{
+            width: 1771px;
+        }
+        .marquee2 .marqueeWrap ul li{
+            float: left;
+            width: 149px;
+            height: 50px;
+            margin-left: 10px;
+            border:1px solid #555;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+<!--marquee方法结构开始-->
+<div class="marquee marquee1">
+    <a href="javascript:;" class="arrow arrowPre"></a>
+    <div class="marqueeWrap" id="marquee">
+        <table>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+        </table>
+    </div>
+    <a href="javascript:;" class="arrow arrowNext"></a>
+</div>
+<!--marquee方法结构结束-->
+<div class="marquee marquee2">
+    <a href="javascript:;" class="arrow2 arrowLeft"></a>
+    <div class="marqueeWrap" id="marquee2">
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <img src="/images/btn.jpg" width="150px" height="50px" border="0" />
+        <!--<ul>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+            <!--<li>1</li>-->
+        <!--</ul>-->
+    </div>
+    <a href="javascript:;" class="arrow2 arrowRight"></a>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+    var senro=new Senro('MSClass');
+//  marquee方法js开始
+    senro.marquee('marquee','top',$('.marquee .arrowNext'),$('.marquee .arrowPre'));
+//  marquee方法js结束
+    senro.marquee('marquee2','right',$('.arrowLeft'),$('.arrowRight'));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Senro.js</title>
+        <meta name="description" content="senro.js make fwd simple!，让前端开发变的更简单！"/>
+        <meta name="keywords" content="前端开发,前端开发框架，前端开发工具，自动化，智能前端，senro,senro.cn,senroJs,senro Doc,senro.js,fwd"/>
+        <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+    <div class="bg">
+        <div class="container">
+            <div class="header">
+
+            </div>
+            <div class="main">
+                <a class="name" href="senroExport.js">senroExport</a><br/>
+                <p class="des">
+                    senroExport 是一个node文件，他可以根据传入的文件路径自动去识别该文件是带有senroLabel标签的html结构，还是带有emmet css的html结构
+                    ，还是需要合并压缩的目录或者js文件，去导出相应的文件。(默认导出senro.3.2.js的方法，可以去senro包里senroCongfig修改版本配置)<br/>
+                    使用方法：<br/>
+                    1.安装 <a class="desLink" href="http://www.nodejs.org/">node</a><br/>
+                    2.下载 <a class="desLink" href="senro.rar">senro</a>包解压到D：根目录<br/>
+                    3.把 <a class="desLink" href="senroExport.bat">senroExport.bat</a>文件放到windows系统的<br/>
+                    <a class="desLink" target="_blank" href="http://wenku.baidu.com/link?url=JcpURqx59DGguGhZj9u4MlUY0WPkx-joS_WINB849OvciK4BTsoWfcs2RU9iptIHOS8flSqXqouIRY_eYDk2o8qHN8pbdVTvEt6hrXwt-7_">sendTo</a>文件夹即可，
+                    4.右击需要导出的文件（HTML文件，js文件，目录均可），选择“发送到”下面的“senroExport”，即可完成所有的导出操作
+
+                    <br/>
+                    <span class="desTit">请注意:</span><br/>
+                    如果senro包放在了其他盘比如E：<br/>
+                    则需要用记事本打开<a class="desLink" href="senroExport.bat">senroExport.bat</a>，修改senro包所在路径,
+                    找到d:修改为e:即可,然后确保sendTo里的senroExport.bat是修改过的文件
+
+                </p>
+
+                <div class="mod history">
+                    <h2 class="modTit">所需文件</h2>
+                    <div class="modCont">
+                        <a href="senro.rar" target="_blank">senro包</a><br/>
+                        <a href="senroExport.bat" target="_blank">senroExport.bat</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                Senro Design<br/>
+                CopyRight&nbsp;&copy;&nbsp; <a href="http://senro.cn" target="_blank">senro.cn</a>&nbsp;&nbsp;powerd by <a href="http://wpa.qq.com/msgrd?v=1&uin=584233821&site=qq&menu=yes" target="_blank">QiuYun</a> 2013.08.18
+                <br/>
+                <a href="http://passtome.com" target="_blank">senro.js</a>
+                <a href="http://senro.cn/html2css/" target="_blank">html2css</a>
+                <a href="/senroLabel/index.html" target="_blank">senroLabel</a>
+                <a href="/senroMerge/index.html" target="_blank">senroMerge</a>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/Senro.3.0.min.js" ></script>
+    <script type="text/javascript" src="js/index.js" ></script>
+    <div class="none">
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faf1bdcb07e4520f2795b7360ea3570fb' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+    </div>
+    </body>
+</html>

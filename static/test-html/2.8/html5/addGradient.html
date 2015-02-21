@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>addGradient</title>
+    <style type="text/css">
+        .gradient{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="gradient"></div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.8.js"></script>
+<script type="text/javascript">
+    var senro=new Senro('cssSandpaper');
+
+    senro.addGradient($('.gradient'),'linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)');
+</script>
+</body>
+</html>

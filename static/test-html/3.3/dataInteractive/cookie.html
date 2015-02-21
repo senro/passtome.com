@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderLR,senro sliderLR"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>cookie</title>
+
+</head>
+<body>
+
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    senro.cookie('set','a','1');
+    senro.console(senro.cookie('get','a'));
+    senro.cookie('del','a','1');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>addScript</title>
+    <style type="text/css">
+        .swf,.video{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .share{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="share"></div>
+<div id="swf1" class="swf">
+
+</div>
+<div id="swf2" class="swf">
+
+</div>
+<div id="video1" class="video">
+
+</div>
+<div id="video2" class="video">
+
+</div>
+<script type="text/javascript" id="jquery" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.8.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    var attr={
+        src:'js/login.js',
+        type:'text/javascript'
+    };
+    senro.addScript(attr,$('#jquery'));
+    alert('login.js已经插在id为jquery的标签之后了！')
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>isIE6</title>
+    <style type="text/css">
+        .swf,.video{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .share{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="share"></div>
+<div id="swf1" class="swf">
+
+</div>
+<div id="swf2" class="swf">
+
+</div>
+<div id="video1" class="video">
+
+</div>
+<div id="video2" class="video">
+
+</div>
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.7.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+    if(senro.isIE6()){
+        alert('是ie6！');
+    }else{
+        alert('不是ie6！');
+    }
+
+</script>
+</body>
+</html>

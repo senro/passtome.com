@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,initRegister,senro initRegister"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>initRegister</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+        /*initRegister方法样式开始*/
+        .regBox {
+            width: 274px;
+            background-color: #23c9d5;
+        }
+        .regBox .regTit {
+            height: 78px;
+        }
+        .regBox .regCont {
+            color: #62411E;
+            width: 284px;
+        }
+        .regBox .row {
+            height: 32px;
+            color: #fff;
+        }
+        .regBox .submitRow{
+            height: auto;
+        }
+        .regBox .agreementRow a{
+            color: #ff9900;
+        }
+        .regBox .rowLeft {
+            float: left;
+            height: 26px;
+            width: 67px;
+        }
+        .regBox .regCont label {
+            color: #fff;
+            display: block;
+            float: left;
+            font-family: "宋体";
+            font-size: 12px;
+            height: 26px;
+            line-height: 26px;
+            width: 63px;
+        }
+        .regBox .rowRight {
+            float: left;
+            height: 26px;
+            position: relative;
+            width: 200px;
+        }
+        .regBox .msgInput {
+            left: 0;
+            position: absolute;
+            top: 0;
+            color: #999999;
+            font-size: 12px;
+            z-index: 2;
+        }
+        .regBox .input{
+            border: 1px solid #BBBBBB;
+            display: block;
+            font-family: "微软雅黑";
+            height: 24px;
+            line-height: 24px;
+            padding: 0 0 0 11px;
+            width: 194px;
+            color: #6C6F79;
+            z-index: 0;
+        }
+        .regBox .msgError {
+            color: #FF0000;
+        }
+        .regBox .submitBtn{
+            width: 235px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            border: 0;
+            background: #EDEDED url("../images/allbgs.png") no-repeat scroll 0 -44px ;
+            cursor: pointer;
+            display: block;
+            font-size: 22px;
+            text-align: center;
+            color: #0b849a;
+            font-family: "微软雅黑";
+        }
+        /*initRegister方法样式结束*/
+    </style>
+</head>
+<body>
+<!--initRegister方法结构开始-->
+<div class="regBox">
+    <div class="regTit">
+
+    </div>
+    <div class="regCont">
+        <form action="" method="post" name="formReg" id="regForm" class="regPanels" target="">
+            <div class="row">
+                <div class="rowLeft">
+                    <label class="username">创建帐号：</label>
+                </div>
+                <div class="rowRight">
+                    <input type="text" id="usernameError" class="input msgInput msgContainer" value="6-25位字母数字或下划线组成"/>
+                    <input type="text" id="username" name="username" class="input inputDefault" maxlength="25" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="rowLeft">
+                    <label for="password">设置密码：</label>
+                </div>
+                <div class="rowRight">
+                    <input type="text" id="passwordError" class="input msgInput msgContainer" value="6-20个字符组成"/>
+                    <input type="password" id="password" name="password" class="input inputDefault" maxlength="20" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="rowLeft">
+                    <label for="repassword">确认密码：</label>
+                </div>
+                <div class="rowRight">
+                    <input type="text" id="repasswordError" class="input msgInput msgContainer" value="确认密码"/>
+                    <input type="password" id="repassword" name="repeatpassword" class="input inputDefault" maxlength="20" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="rowLeft">
+                    <label for="realname">真实姓名：</label>
+                </div>
+                <div class="rowRight">
+                    <input type="text" id="realnameError" class="input msgInput msgContainer" value="帐号归属凭证，保障帐号安全"/>
+                    <input type="text" id="realname" name="realname" class="input inputDefault" maxlength="5" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="rowLeft">
+                    <label for="identity">身份证号：</label>
+                </div>
+                <div class="rowRight">
+                    <input type="text" id="identityError" class="input msgInput msgContainer" value="帐号归属凭证，保障帐号安全"/>
+                    <input type="text" id="identity" name="identity" class="input inputDefault" maxlength="18" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="rowLeft">
+                    <label for="mobile">手机号码：</label>
+                </div>
+                <div class="rowRight">
+                    <input type="text" id="mobileError" class="input msgInput msgContainer" value="手机号码"/>
+                    <input type="text" id="mobile" name="mobile" class="input inputDefault" maxlength="20" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="row agreementRow">
+                <input type="checkbox" checked="checked" id="protocol"/>
+                <span>我已仔细阅读并接受 <a target="_blank" href="http://res.woniu.com/support_new/faq/serviceRulesAgreement1.html">"蜗牛通行证协议"</a></span>
+            </div>
+            <div class="row submitRow">
+                <input class="submitBtn iePng" id="btnSubmit" type="submit" value="完成注册"/>
+            </div>
+        </form>
+        <div class="subSuccess none" id="subSuccess">
+            <h2>
+                恭喜你，你已完成注册
+            </h2>
+
+        </div>
+    </div>
+</div>
+<!--initRegister方法结构结束-->
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.0.js"></script>
+<script type="text/javascript">
+    var senro=new Senro('register');
+
+    if(document.domain.match(/woniu\.com/g)==null){
+        alert('请在线上测试，登录控件需要域名为woniu.com！');
+    }
+
+    //initRegister方法的js开始
+    senro.initRegister('#regForm','.row',function(data){
+        //注册成功
+        senro.console(data);
+        alert('登录成功');
+//        if(data.msgcode==1002){
+//            //注册成功
+//            alert('登录成功');
+//        }else{
+//            //注册失败
+//            alert('登录失败');
+//        }
+        return false;
+    });
+    //initRegister方法js结束
+
+</script>
+</body>
+</html>

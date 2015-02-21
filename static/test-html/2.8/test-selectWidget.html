@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>selectWidget</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/2.8/senro.css" />
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #666;
+        }
+        .selected{
+            width: 300px;
+            height: 50px;
+            padding: 0;
+            margin: 10px;
+            line-height: 50px;
+            background-color: #f3f3f3;
+        }
+        .option{
+            height: 50px;
+            line-height: 50px;
+            background-color: #cccccc;
+        }
+        .option:hover,.option_hover{
+            color:red;
+            background-color: #6ca508;
+        }
+        .icon{
+            width: 47px;
+            height: 47px;
+            border: 0;
+            background-color: #87ceeb;
+        }
+        .icon:hover{
+            background-color: #b6d1fb;
+        }
+        .cusScrollCube{
+            background-color: red;
+        }
+        .cusScrollLine{
+            background-color: #f3f3f3;
+        }
+        #senroSelect1{
+            z-index: 10;
+        }
+        #senroSelect2{
+            z-index: 9;
+        }
+    </style>
+
+</head>
+<body>
+<div class="bg">
+    <form id="form" name="form" method="post" action="">
+
+        <select name="language" id="senroSelect1" class="selected" data-scrollCube="cusScrollCube" data-scrollLine="cusScrollLine">
+            <option value="senroSelect1test1" class="option1" data-url="http://www.woniu.com" data-target="_blank">senroSelect1test1</option>
+            <option value="senroSelect1test2" selected="selected" data-url="http://www.woniu.com">senroSelect1test2</option>
+            <option value="senroSelect1test3" class="option3">senroSelect1test3</option>
+        </select>
+
+        <select name="language" id="senroSelect2" class="selected">
+            <option value="test1" class="option1">test1</option>
+            <option value="test2" selected="selected">test2</option>
+            <option value="test3" class="option3">test3</option>
+        </select>
+        <input type="hidden" name="lang" value="en" />
+
+    </form>
+</div>
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.8-todo.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['drag','mouseWheel']);
+
+    //senro.select('senroSelect');
+    senro.selectWidget('senroSelect1','icon','option_hover',2);
+    senro.selectWidget('senroSelect2','icon','option_hover');
+    //senro.cssTriangle($('.icon'),'down','15px','blue');
+    //alert($('#senroSelect1'));
+
+</script>
+</body>
+</html>

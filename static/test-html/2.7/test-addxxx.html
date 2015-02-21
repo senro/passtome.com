@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title></title>
+    <style type="text/css">
+        .swf,.video{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .share{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="share"></div>
+<div id="swf1" class="swf">
+
+</div>
+<div id="swf2" class="swf">
+
+</div>
+<div id="video1" class="video">
+
+</div>
+<div id="video2" class="video">
+
+</div>
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.7.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['video','swf']);
+
+//    $('body').click(function(){
+//        senro.addVideo('video1','../../media/test.flv',null,884,557,function(data){
+//            data.play();
+//        });
+//    });
+
+    senro.addVideo('video1','../../media/test.flv',null,null,null);
+    senro.addVideo('video2','../../media/test.flv',null,null,null,function(data){
+        data.play();
+    });
+    senro.addSwf('swf1','../../media/test.swf',500,200);
+    senro.addSwf('swf2','../../media/test.swf',500,200,function(data){
+        console.log(data);
+    });
+    senro.addNavFooter('黑金');
+    senro.addShare($('.share'));
+</script>
+</body>
+</html>

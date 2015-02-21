@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 300px;
+        }
+        .first-tit{
+            display: block;
+            height: 50px;
+            border: 1px solid #0d3349;
+            line-height: 50px;
+            text-indent: 10px;
+            background-color: #999;
+            text-decoration: none;
+            color: #000;
+        }
+        .first-tit:hover,.first-tit_hover{
+            color: #ffc24a;
+            background-color: #21abe7;
+        }
+        .first-cont{
+            overflow: hidden;
+        }
+        .sec-item{
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-indent: 20px;
+            background-color: #d6d4d7;
+            text-decoration: none;
+            color: #000;
+        }
+        .sec-item:hover,.sec-item_hover{
+            background-color: #0b5696;
+            color: #fff;
+        }
+    </style>
+    
+</head>
+<body>
+<div class="container">
+   <div class="first">
+       <a class="first-tit" href="#">
+       一级栏目
+       </a>
+       <ul class="first-cont">
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+       </ul>
+   </div>
+   <div class="first">
+       <a class="first-tit" href="#">
+            一级栏目
+       </a>
+       <ul class="first-cont">
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+       </ul>
+   </div>
+   <div class="first">
+       <a class="first-tit" href="#">
+           一级栏目
+       </a>
+       <ul class="first-cont">
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+           <li>
+               <a class="sec-item" href="#">一级栏目子标题</a>
+           </li>
+
+       </ul>
+   </div>
+</div>
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    var lastOne,
+        $secItem=$('.sec-item');
+
+    $secItem.click(function(){
+        var index=$secItem.index(this);
+
+        $secItem.eq(lastOne).removeClass('sec-item_hover');
+        $secItem.eq(index).addClass('sec-item_hover');
+
+        lastOne=index;
+    });
+    sliderTab($('.first-tit'),$('.first-cont'),'first-tit_hover','click');
+    function sliderTab($_btns,$_conts,str_btn_hover,str_trigerType){
+        /*
+         * str_trigerType必须是mouseover或者click，做为定义jquery事件类型名称
+         * */
+        var $btns=$_btns,
+            $conts=$_conts,
+            trigerType=str_trigerType||'mouseover',
+            lastOne=0;
+        //默认给第一个按钮加上hover,隐藏其他内容
+        $btns.eq(0).addClass(str_btn_hover);
+        for(var i=1;i<$conts.length;i++){
+            $conts.eq(i).css('height','0px');
+        }
+        $btns.bind(trigerType,function(){
+            var index=$btns.index(this);
+            if(index==lastOne){
+                return false;
+            }
+
+            $conts.eq(lastOne).animate({
+                height:0
+            });
+            $btns.eq(lastOne).removeClass(str_btn_hover);
+
+            $conts.eq(index).animate({
+                height:$conts.eq(index).find('a').eq(0).outerHeight()*$conts.eq(index).find('a').length
+            });
+            $btns.eq(index).addClass(str_btn_hover);
+
+            lastOne=index;
+
+            return false;
+        });
+
+        return false;
+    }
+</script>
+
+</body>
+</html>

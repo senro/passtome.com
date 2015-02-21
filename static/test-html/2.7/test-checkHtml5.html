@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>checkHtml5</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="bg">
+
+</div>
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.6.js"></script>
+<script type="text/javascript">
+    var senro=new Senro('testHtml5');
+
+    senro.checkHtml5('webgl',function(){
+        alert('webGLOk');
+    },function(){
+        alert('webGLnotOk');
+    });
+
+</script>
+</body>
+</html>

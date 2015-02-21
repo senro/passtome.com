@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderTab,senro sliderTab" />
+    <meta name="description" content="senro.js, make fwd simple!" />
+
+    <title>sliderTab</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+        /*sliderTab方法样式开始*/
+        .sliderTab {
+            height: /*height*/306px/*height*/;
+            width: /*width*/215px/*width*/;
+            overflow: hidden;
+        }
+        .sliderTabBtn {
+            color: #754400;
+            float: left;
+            width: /*btnWidth*/106px/*btnWidth*/;
+            height: /*btnHeight*/35px/*btnHeight*/;
+            line-height: 35px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .sliderTabBtn :hover{
+
+        }
+        .sliderTabCont {
+            height: /*contHeight*/271px/*contHeight*/;
+            width: /*contWidth*/214px/*contWidth*/;
+        }
+        .sliderTabCurrent{
+            color: #a56000;
+        }
+        /*sliderTab方法样式结束*/
+    </style>
+</head>
+<body>
+<!--sliderTab方法结构开始-->
+<div class="sliderTab">
+    <div class="sliderTabBtns clearfix">
+        <a class="sliderTabBtn" href="javascript:;">切换按钮</a>
+        <a class="sliderTabBtn" href="javascript:;">切换按钮</a>
+    </div>
+
+    <div class="sliderTabCont">
+        切换内容1
+    </div>
+    <div class="sliderTabCont">
+        切换内容2
+    </div>
+</div>
+<!--sliderTab方法结构结束-->
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.1.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+//  sliderTab方法js开始
+    senro.sliderTab($('.sliderTabBtn'),$('.sliderTabCont'),'sliderTabCurrent');
+//  sliderTab方法js结束
+</script>
+</body>
+</html>

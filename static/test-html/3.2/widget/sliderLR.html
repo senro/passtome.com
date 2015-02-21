@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderLR,senro sliderLR"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>sliderLR</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+        }
+        /*sliderLR方法样式开始*/
+        .sliderLR{
+            position: relative;
+            width: /*bigWidth*/885px/*bigWidth*/;
+            padding: 10px;
+            background-color: /*sliderLRBg*/#1f1b18/*sliderLRBg*/;
+            overflow: hidden;
+        }
+        .sliderLR .arrow{
+            position: absolute;
+            width: 28px;
+            height: 55px;
+            top: 50%;
+            margin-top: -23px;
+            /*background: url(/images/arrow.gif) no-repeat;*/
+            z-index: 5;
+            outline: none;
+        }
+        .sliderLR .arrowLeft{
+            left: 10px;
+            background: url(/images/leftBtn.jpg) no-repeat;
+        }
+        .sliderLR .arrowRight{
+            right: 10px;
+            background: url(/images/rightBtn.jpg) no-repeat;
+        }
+        /*大图*/
+        .sliderLR .itemStag{
+            position: relative;
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图容器高度*/
+            margin: 34px auto 0 auto;
+            overflow: hidden;
+        }
+        .sliderLR .itemWrap{
+            position: absolute;
+            width: 999999px;
+        }
+        .sliderLR .item{
+            float: left;
+            width: /*bigWidth*/885px/*bigWidth*/;/*大图宽度*/
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图高度*/
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+            outline: none;
+            position: static;
+        }
+        .sliderLR .item img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+        /*大图结束*/
+        /*缩略图*/
+        .sliderLR .thumbs{
+            width: 100%;
+        }
+        .sliderLR .thumbsStag{
+            position: relative;
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图容器高度*/
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .sliderLR .thumbsWrap{
+            position: absolute;
+            width: 9999px;
+            margin-left: -5px;
+        }
+        .sliderLR .thumbItem{
+            position: relative;
+            float: left;
+            width: /*smallWidth*/171px/*smallWidth*/;/*缩略图宽度*/
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图高度*/
+            /*border: 1px solid #fff;*/
+            margin-left: 5px;
+            outline: none;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .sliderLR .thumbItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+        /*缩略图结束*/
+        .sliderLR .thumb_current{
+            position: absolute;
+            border: 2px solid /*currentBorder*/#B06D02/*currentBorder*/;
+            z-index: 100;
+            overflow: hidden;
+        }
+        /*滚动条*/
+        .sliderLR .scroll{
+            position: relative;
+            height: 13px;
+            margin-top: 10px;
+        }
+        .sliderLR .scrollLine{
+            width: 100%;
+            height: 2px;
+            background-color: #5b4d33;
+            position: absolute;
+            top: 6px;
+            overflow: hidden;
+        }
+        .sliderLR .scrollCube{
+            position: absolute;
+            width: 80px;
+            height: 13px;
+            background-color: /*scrollCube*/#ac905a/*scrollCube*/;
+            overflow: hidden;
+        }
+        /*滚动条结束*/
+        /*sliderLR方法样式结束*/
+        .sliderLR{
+            position: absolute;
+        }
+        /*视频*/
+        .video{
+            position: relative;
+            width: /*bigWidth*/885px/*bigWidth*/;
+            padding: 10px;
+            background-color: /*videoBg*/#1f1b18/*videoBg*/;
+            overflow: hidden;
+            left:1000px;
+        }
+        .video .arrow{
+            position: absolute;
+            width: 28px;
+            height: 55px;
+            top: 50%;
+            margin-top: -23px;
+            /*background: url(/images/arrow.gif) no-repeat;*/
+            z-index: 5;
+            outline: none;
+        }
+        .video .arrowLeft{
+            left: 10px;
+            background: url(/images/leftBtn.jpg) no-repeat;
+        }
+        .video .arrowRight{
+            right: 7px;
+            background: url(/images/rightBtn.jpg) no-repeat;
+        }
+            /*大图*/
+        .video .itemStag{
+            position: relative;
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图容器高度*/
+            margin: 34px auto 0 auto;
+            overflow: hidden;
+        }
+        .video .itemWrap{
+            position: absolute;
+            width: 999999px;
+        }
+        .video .item{
+            float: left;
+            width: /*bigWidth*/885px/*bigWidth*/;/*大图宽度*/
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图高度*/
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+            outline: none;
+            position: static;
+        }
+        .video .item img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+            /*大图结束*/
+            /*缩略图*/
+        .video .thumbs{
+            width: 100%;
+        }
+        .video .thumbsStag{
+            position: relative;
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图容器高度*/
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .video .thumbsWrap{
+            position: absolute;
+            width: 9999px;
+            margin-left: -5px;
+        }
+        .video .thumbItem{
+            position: relative;
+            float: left;
+            width: /*smallWidth*/171px/*smallWidth*/;/*缩略图宽度*/
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图高度*/
+            /*border: 1px solid #fff;*/
+            margin-left: 5px;
+            outline: none;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .video .thumbItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+            /*缩略图结束*/
+        .video .thumb_current{
+            position: absolute;
+            border: 2px solid /*currentBorder*/#B06D02/*currentBorder*/;
+            z-index: 100;
+            overflow: hidden;
+        }
+            /*滚动条*/
+        .video .scroll{
+            position: relative;
+            height: 13px;
+            margin-top: 10px;
+        }
+        .video .scrollLine{
+            width: 100%;
+            height: 2px;
+            background-color: #5b4d33;
+            position: absolute;
+            top: 6px;
+            overflow: hidden;
+        }
+        .video .scrollCube{
+            position: absolute;
+            width: 80px;
+            height: 13px;
+            background-color: /*scrollCube*/#ac905a/*scrollCube*/;
+            overflow: hidden;
+        }
+            /*滚动条结束*/
+    </style>
+
+</head>
+<body>
+
+<!--sliderLR方法结构开始-->
+<div class="sliderLR">
+    <a class="arrow arrowLeft" href="javascript:;"></a>
+    <a class="arrow arrowRight" href="javascript:;"></a>
+    <div class="itemStag">
+        <div class="itemWrap clearfix">
+
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b1.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b2.jpg" title="B2C" />
+                B2C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b3.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b4.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b5.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b6.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b7.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b8.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="item" href="javascript:;">
+                <img src="/images/pics/1-b/b9.jpg" title="B1C" />
+                B1C
+            </a>
+
+        </div>
+    </div>
+
+    <div class="thumbs">
+        <div class="thumbsStag">
+            <div class="thumbsWrap clearfix">
+
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b1.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b2.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b3.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b4.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b5.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b6.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b7.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b8.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b9.jpg" title="B1C" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="scroll">
+            <div class="scrollLine"></div>
+            <a class="scrollCube" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+<!--sliderLR方法结构结束-->
+
+<!--视频图集开始-->
+<div class="video">
+    <a class="arrow arrowLeft" href="javascript:;"></a>
+    <a class="arrow arrowRight" href="javascript:;"></a>
+    <div class="itemStag">
+        <div class="itemWrap clearfix">
+
+            <div class="item">
+                <div id="video1"></div>
+            </div>
+            <div class="item">
+                <div id="video2"></div>
+            </div>
+            <div class="item">
+                <div id="video3"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="thumbs">
+        <div class="thumbsStag">
+            <div class="thumbsWrap clearfix">
+
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b1.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b2.jpg" title="B1C" />
+                </a>
+                <a class="thumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b3.jpg" title="B1C" />
+                </a>
+
+            </div>
+        </div>
+        <div class="scroll">
+            <div class="scrollLine"></div>
+            <a class="scrollCube" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+<!--视频图集结束-->
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['drag','mouseWheel','video']);
+//  sliderLR方法js开始
+    //senro.sliderLR($('.sliderLR .itemWrap'),$('.sliderLR .arrowLeft'),$('.sliderLR .arrowRight'),$('.sliderLR .thumbsWrap'),null,null,$( ".sliderLR .scrollCube"));
+    senro.sliderLR({
+        list:$('.sliderLR .itemWrap'),
+        btn_l:$('.sliderLR .arrowLeft'),
+        btn_r:$('.sliderLR .arrowRight'),
+        thumbList:$('.sliderLR .thumbsWrap'),
+        sliderCube:$( ".sliderLR .scrollCube"),
+        current:'thumb_current'
+    });
+//  sliderLR方法js结束
+//    视频
+    senro.addVideo('video1','media/test.flv');
+    senro.addVideo('video2','media/test.flv');
+    senro.addVideo('video3','media/test.flv');
+    senro.sliderLR($('.video .itemWrap'),$('.video .arrowLeft'),$('.video .arrowRight'),$('.video .thumbsWrap'),null,null,$( ".video .scrollCube"));
+
+</script>
+</body>
+</html>

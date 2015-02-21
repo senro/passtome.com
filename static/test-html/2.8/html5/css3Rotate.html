@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>css3Rotate</title>
+    <style type="text/css">
+        .gradient{
+            width: 200px;
+            height: 200px;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+<div class="gradient"></div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.8.js"></script>
+<script type="text/javascript">
+    var senro=new Senro('cssSandpaper');
+
+    senro.css3Rotate($('.gradient'),60);
+</script>
+</body>
+</html>

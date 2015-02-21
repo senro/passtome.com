@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>directionAnimate</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+        }
+        .pic{
+            float: left;
+            position: relative;
+            width: 154px;
+            height: 227px;
+            margin-left: 20px;
+            overflow: hidden;
+        }
+        .mask{
+            position: absolute;
+            width: 154px;
+            height: 227px;
+            left: -154px;
+            top:0;
+            background-color: #000;
+            opacity: 0.5;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="pic">
+    <a href="">
+        <img class="img" src="../../images/img.jpg" />
+        <div class="mask"></div>
+    </a>
+</div>
+
+<div class="pic">
+    <a href="">
+        <img class="img" src="../../images/img.jpg" />
+        <div class="mask"></div>
+    </a>
+</div>
+
+<div class="pic">
+    <a href="">
+        <img class="img" src="../../images/img.jpg" />
+        <div class="mask"></div>
+    </a>
+</div>
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.3.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(),
+        $pics=$('.pic'),
+        $masks=$('.mask');
+    $pics.each(function(index){
+        senro.directionAnimate($pics.eq(index),$masks.eq(index));
+    });
+
+</script>
+</body>
+</html>

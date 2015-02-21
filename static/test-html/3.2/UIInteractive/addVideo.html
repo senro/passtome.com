@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderLR,senro sliderLR"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>addVideo</title>
+    <style type="text/css">
+        .video{
+            width: 500px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="video">
+     <div id="video"></div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['video']);
+    senro.addVideo('video','/media/test.flv');
+</script>
+</body>
+</html>

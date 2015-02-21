@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>simpleSliderLR</title>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,simpleSliderLR,senro simpleSliderLR"/>
+    <meta name="viewport" content="width=640, target-densitydpi=device-dpi, minimum-scale=0.5, maximum-scale=2, user-scalable=1">
+    <meta name="copyright" content="苏州蜗牛数字科技股份有限公司"/>
+    <meta name="author" content="584233821@qq.com(senro)"/>
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <style type="text/css">
+        /*simpleSliderLR方法样式开始*/
+        .simpleSliderLR{
+            position: relative;
+            width: /*width*/670px/*width*/;
+            height: /*height*/427px/*height*/;
+        }
+        .simpleSliderLR .itemStag{
+            position: relative;
+            width: /*width*/670px/*width*/;
+            height: /*height*/427px/*height*/;
+            overflow: hidden;
+        }
+        .simpleSliderLR .itemWrap{
+            position: absolute;
+            width: 9999px;
+            height: /*height*/427px/*height*/;
+        }
+        .simpleSliderLR .itemImg{
+            float: left;
+            width: /*width*/670px/*width*/;
+            height: /*height*/427px/*height*/;
+        }
+        .simpleSliderLR .arrow{
+            background: url(/images/test-simpleSliderLR/arrow.gif) no-repeat 0 0;
+            cursor: pointer;
+            height: 85px;
+            position: absolute;
+            top: 50%;
+            margin-top: -40px;
+            width: 50px;
+            display: block;
+            outline: none;
+        }
+        .simpleSliderLR .arrowLeft {
+            background-position: left top;
+            left: -63px;
+        }
+        .simpleSliderLR .arrowRight {
+            background-position: right top;
+            right: -63px;
+        }
+        /*simpleSliderLR方法样式结束*/
+        .simpleSliderLR{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<!--simpleSliderLR方法结构开始-->
+<div class="simpleSliderLR">
+    <a class="arrow arrowLeft" href="javascript:;"></a>
+    <a class="arrow arrowRight" href="javascript:;"></a>
+    <div class="itemStag">
+        <div class="itemWrap clearfix">
+            <img class="itemImg" src="/images/test-simpleSliderLR/1.jpg" />
+            <img class="itemImg" src="/images/test-simpleSliderLR/2.jpg" />
+            <img class="itemImg" src="/images/test-simpleSliderLR/3.jpg" />
+            <img class="itemImg" src="/images/test-simpleSliderLR/4.jpg" />
+            <img class="itemImg" src="/images/test-simpleSliderLR/5.jpg" />
+        </div>
+    </div>
+</div>
+<!--simpleSliderLR方法结构结束-->
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    var senro=new Senro(['video','mobile']);
+//  simpleSliderLR方法js开始
+    senro.simpleSliderLR($('.simpleSliderLR .arrowLeft'),$('.simpleSliderLR .arrowRight'),$('.simpleSliderLR .itemWrap'),2);
+//  simpleSliderLR方法js结束
+});
+</script>
+</body>
+</html>

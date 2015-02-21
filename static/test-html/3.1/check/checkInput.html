@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>checkInput</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+        }
+        .none{
+            display: none;
+        }
+        .row{
+            width: 300px;
+            height: 30px;
+            position: relative;
+        }
+        .msg{
+            position: absolute;
+            left: 0;
+            /*top: 0;*/
+            color: red;
+        }
+        .sRequireMsg{
+            float: left;
+            width: 100px;
+            height: 20px;
+            color: red;
+            left: 162px;
+            top:0;
+        }
+        .normalInput{
+
+        }
+    </style>
+
+</head>
+<body>
+<div class="bg">
+    <div class="container iePng">
+        <form class="form" action="" autocomplete="off">
+            <div class="row">
+                 <input type="text" class="email1 normalInput" value="请输入邮箱" />
+                 <input type="text" class="emailMsg msg none" />
+            </div>
+            <div class="row">
+                <input type="text" class="cellPhone normalInput" value="请输入手机"/>
+                <input type="text" class="cellPhoneMsg1 msg none" />
+            </div>
+            <div class="row">
+                <input type="text" class="require1 normalInput" value="此项必填"/>
+                <input type="text" class="requireMsg msg none" />
+            </div>
+            <div class="row">
+                <input type="text" class="chinaID2 normalInput" value="请输入身份证"/>
+                <input type="text" class="chinaIDMsg2 msg2 none" />
+            </div>
+            <div class="row">
+                <input type="text" class="require1 normalInput" value="此项必填"/>
+                <div class="requireMsg msg none sRequireMsg"></div>
+            </div>
+            <div class="row">
+                <input type="text" class="password normalInput" value="请输入密码"/>
+                <input type="text" class="passwordMsg msg none" />
+            </div>
+            <div class="row">
+                <input type="text" class="rePassword normalInput" />
+                <input type="text" class="rePasswordMsg msg none" />
+            </div>
+            <!--<div class="row">-->
+                <!--<input type="checkbox" class="checkBox" />-->
+            <!--</div>-->
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.0.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    senro.checkInput($('.form'),function(){
+        alert('allOk');
+    },function(){
+        alert('notOk');
+    });
+    //如果修改默认选择符，才设置一下属性
+    senro.checkInput.email.selecter='email1';
+    senro.checkInput.require.selecter='require1';
+    senro.checkInput.cellPhone.msgSelecter='cellPhoneMsg1';
+</script>
+</body>
+</html>

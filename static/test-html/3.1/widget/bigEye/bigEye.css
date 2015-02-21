@@ -1,0 +1,46 @@
+
+.senro-bigEye {
+    height: 185px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 330px;
+}
+.senro-bigEye .item {
+    float: left;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+    overflow: hidden;
+}
+.senro-bigEye .itemImg {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.senro-bigEye .itemTxt {
+    background-color: #C7BFB2;
+    color: #817054;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+.senro-bigEye .dots {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+    top: 160px;
+    z-index: 100;
+}
+.senro-bigEye .dot{
+    background: url("images/dot-black.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 13px;
+    margin-left: 5px;
+    outline: medium none;
+    width: 13px;
+}
+.senro-bigEye .dot_current {
+    background: url("images/dot-orange.gif") no-repeat scroll 0 0;
+}

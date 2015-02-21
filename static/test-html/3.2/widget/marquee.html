@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,marquee,senro marquee"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>marquee</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <style type="text/css">
+        body {
+            color: #c5ba78;
+            background-color: #000;
+            font: 12px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+        }
+            /*marquee方法样式开始*/
+        .marqueeV{
+            width: 237px;
+            margin: 0 auto;
+        }
+        .marqueeV .itemStag{
+            height: 230px;
+            overflow: hidden;
+            margin-top: 12px;
+            border: 1px solid #fff;
+        }
+        .marqueeV .btn{
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            outline: none;
+            background-color: #fff;
+        }
+        .marqueeV .preBtn{
+            margin-bottom: 10px;
+        }
+        .marqueeV .nextBtn{
+            margin-top: 10px;
+        }
+        .marqueeV .itemTable{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .marqueeV .table td{
+            width: 79px;
+            height: 22px;
+        }
+        .marqueeV .itemWrap{
+            line-height: 25px;
+        }
+        .marqueeV .item{
+            /*margin-top: 5px;*/
+        }
+            /*marquee方法样式结束*/
+            /*marquee2*/
+        .marqueeH{
+            width: 862px;
+            height: 50px;
+            margin: 0 auto;
+            border:1px solid #fff;
+            position: relative;
+        }
+        .marqueeH .itemWrap{
+            float: left;
+            width: 8000px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .marqueeH .btn{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            top: 50%;
+            margin-top: -10px;
+        }
+        .marqueeH .preBtn{
+            left: -20px;
+        }
+        .marqueeH .nextBtn{
+            right: -20px;
+        }
+        .marqueeH .item{
+            float: left;
+            width: 149px;
+            height: 50px;
+            margin-left: 10px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<!--marquee方法结构开始-->
+<div class="marquee marqueeV" id="marqueeV">
+    <a href="javascript:;" class="btn preBtn"></a>
+    <div class="itemStag">
+        <!--<div class="itemWrap">-->
+        <!--<table class="itemTable">-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>1</td><td>1</td><td>1</td>-->
+        <!--</tr>-->
+        <!--</table>-->
+        <!--</div>-->
+        <ul class="itemWrap">
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+            <li class="item">111111111111111111111111111111111</li>
+        </ul>
+
+    </div>
+
+    <a href="javascript:;" class="btn nextBtn"></a>
+</div>
+
+<!--marquee方法结构结束-->
+<div class="marquee marqueeH" id="marqueeH">
+    <a href="javascript:;" class="btn preBtn"></a>
+    <div class="itemStage">
+        <ul class="itemWrap">
+            <li class="item">1</li>
+            <li class="item">1</li>
+            <li class="item">1</li>
+            <li class="item">1</li>
+            <li class="item">1</li>
+            <li class="item">1</li>
+        </ul>
+    </div>
+    <a href="javascript:;" class="btn nextBtn"></a>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+    //  marquee方法js开始
+    senro.marquee($('.marqueeV .itemWrap'),'bottom',$('.marqueeV .preBtn'),$('.marqueeV .nextBtn'));
+    //  marquee方法js结束
+    senro.marquee($('.marqueeH .itemWrap'),'right',$('.marqueeH .preBtn'),$('.marqueeH .nextBtn'));
+
+</script>
+</body>
+</html>

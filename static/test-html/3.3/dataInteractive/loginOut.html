@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>loginOut</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<a class="loginOut" href="javascript:;">注销</a>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    senro.addNavFooter('黑金');
+    senro.checkLogin(function(){
+        senro.loginOut($('.loginOut'));
+    });
+</script>
+</body>
+</html>

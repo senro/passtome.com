@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title></title>
+    <style type="text/css">
+        .swf,.video{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .btn{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: red;
+        }
+        .btn:hover,.current{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<a class="btn" href="javascript:;">1</a>
+<a class="btn" href="javascript:;">2</a>
+<a class="btn" href="javascript:;">3</a>
+<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.7.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    senro.addCurrent($('.btn'),'current');
+</script>
+</body>
+</html>

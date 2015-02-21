@@ -1,0 +1,77 @@
+/**
+ * Created with WebStorm.
+ * User: qiuyun
+ * Date: 14-2-11
+ * Time: 下午3:54
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    background-color: #2c64a3;
+    font: 14px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+    color: #fff;
+}
+.bg {
+    min-width: 960px;
+    border-top: 5px solid #ffd93b;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    color: #ffd93b;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.questions{
+    text-align: center ;
+    line-height: 25px;
+    padding-top: 30px;
+}
+.slogan{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+.guide{
+    line-height: 25px;
+    margin-top: 20px;
+}
+.rule{
+    line-height: 25px;
+}
+.ruleIntro{
+    margin-bottom: 10px;
+}
+.production{
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd93b;
+    text-decoration: none;
+}
+.h2{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.copyRight{
+    padding-top: 31px;
+    background: url("../images/haveFun.png") no-repeat top center;
+    margin-top: 40px;
+    text-align: center;
+}
+.bold{
+    font-weight: bold;
+}
+hr{
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #808080;
+    margin-top: 18px;
+}
+.script{
+    color: #ccc;
+}

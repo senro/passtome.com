@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Senro Export</title>
+    <meta name="description" content="senro编译，翻译页面的senroLabel标签，生成相应的文件！"/>
+    <meta name="keywords" content="senro.js,senro.cn,Senro Export"/>
+    <meta name="copyright" content="苏州蜗牛数字科技股份有限公司"/>
+    <meta name="author" content="584233821@qq.com(senro)"/>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+</head>
+<body>
+<div class="bg">
+    <div class="container">
+        <div class="form">
+            <form class="form" enctype="multipart/form-data" id="exportForm" action="http://www.woniu.com/" method="post">
+                <div class="row title clearfix">
+                    Senro Label(本地)<br/>
+                     <span class="smallTit">
+                        编译该html文件里所有的 “< !--senroLabel.方法名-- >”标签，生成相应的样式、结构、和js，该文件以“文件名-beforeSenroExport”文件备份
+                    </span>
+                </div>
+
+                <div class="row clearfix">
+                    <label class="label" for="write_inputUrl">html文件路径:</label>
+                    <input name="write_inputUrl" class="input inputUrl" id="write_inputUrl" type="text"/>&nbsp;&nbsp;(*)
+                    <br/>(后缀名是.html的路径)
+                </div>
+                <div class="row none clearfix">
+                    <label class="label" for="exportUrl">css导出路径:&nbsp;&nbsp;&nbsp;</label>
+                    <input name="exportUrl" class="input exportUrl" id="exportUrl" type="text"/>&nbsp;&nbsp;(*)
+                    <br/>(如果路径不带文件名，默认css文件名为：senroExportCss.css)
+                </div>
+                <div class="row clearfix">
+                    <input class="submit" type="submit" value="导出"/>
+                </div>
+                <div class="row log clearfix">
+                    <p class="logTit bold">导出日志：</p>
+                    <div class="logCont">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            Senro Design<br/>
+            CopyRight ©  <a href="http://senro.cn" target="_blank">senro.cn</a>  powerd by QiuYun 2013.11.21<br/>
+            <a href="http://passtome.com" target="_blank">senro.js</a>
+            <a href="http://senro.cn/html2css/" target="_blank">html2css</a>
+            <a href="/senroMerge/index.html" target="_blank">senroMerge</a>
+            <a href="/senroExport/index.html" target="_blank">senroExport</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/Senro.2.7.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

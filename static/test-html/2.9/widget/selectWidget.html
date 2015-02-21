@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,selectWidget,senro selectWidget"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>selectWidget</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #666;
+        }
+        /*selectWidget方法样式开始*/
+        .senroSelect{
+            position: relative;
+            width: 98px;
+            height: 18px;
+            background-color: #fff;
+            overflow: hidden;
+            border-left: 1px solid #828177;
+            border-top: 1px solid #828177;
+            border-right: 1px solid #F9F8F3;
+            border-bottom: 1px solid #F9F8F3;
+        }
+        .senroSelect-cont{
+            position: absolute;
+            width: 98px;
+            background-color: #fff;
+            font-size: 14px;
+        }
+        .senroSelect-cont a{
+            display: block;
+            text-decoration: none;
+        }
+        .senroSelect-icon{
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border: 1px solid #90aae4;
+            right: 1px;
+            top: 2px;
+            background-color: #b6d1fb;
+            overflow: hidden;
+            z-index: 2;
+            outline: none;
+        }
+
+        .senroSelect-icon:hover{
+            background-color: #C0E4FC;
+        }
+        .senroSelected{
+            padding: 1px 0 1px 4px;
+            cursor: default;
+            color:#000;
+            text-decoration: none;
+        }
+        .senroOption{
+            display: block;
+            color:#000;
+            background-color: #fff;
+            text-decoration: none;
+        }
+        .senroOption:hover,.senroOption_hover{
+            background-color: #316ac5;
+            cursor: default;
+        }
+            /*select滚动条*/
+        .senroOptions{
+            position: relative;
+        }
+        .senroOptionsWrap{
+            position: absolute;
+            width: 100%;
+            z-index: 99;
+        }
+        .senroSelectScrollLine{
+            position: absolute;
+            width: 25px;
+            right: 0;
+            top:0;
+            background-color: #999;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .senroSelectScrollCube{
+            position: absolute;
+            width: 25px;
+            right: 0;
+            top:0;
+            background-color: #000;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .senroOptions{
+            overflow: hidden;
+        }
+        /*selectWidget方法样式结束*/
+        .select{
+            width: 300px;
+            height: 50px;
+            padding: 0;
+            line-height: 50px;
+            background-color: #f3f3f3;
+        }
+        .option{
+            height: 50px;
+            line-height: 50px;
+            background-color: #cccccc;
+        }
+        .option:hover,.option_hover{
+            color:red;
+            background-color: #6ca508;
+        }
+        .icon{
+            width: 47px;
+            height: 47px;
+            border: 0;
+            background-color: #87ceeb;
+        }
+        .icon:hover{
+            background-color: #b6d1fb;
+        }
+        .cusScrollCube{
+            background-color: red;
+        }
+        .cusScrollLine{
+            background-color: #f3f3f3;
+        }
+        #senroSelect1{
+            z-index: 10;
+        }
+
+        #senroSelect2{
+            z-index: 9;
+        }
+    </style>
+
+</head>
+<body>
+<div class="bg">
+    <form id="form" name="form" method="post" action="">
+
+        <!--selectWidget方法结构开始-->
+        <select name="language" id="senroSelect" class="select" data-scrollCube="cusScrollCube" data-scrollLine="cusScrollLine">
+            <option value="senroSelect1test1" class="option option1" data-url="http://www.woniu.com" data-target="_blank">senroSelect1test1</option>
+            <option value="senroSelect1test2" class="option option2" selected="selected" data-url="http://www.woniu.com">senroSelect1test2</option>
+            <option value="senroSelect1test3" class="option option3">senroSelect1test3</option>
+        </select>
+        <!--selectWidget方法结构结束-->
+
+        <select name="language" id="senroSelect2" class="select">
+            <option value="test1" class="option option1">test1</option>
+            <option value="test2" class="option option2" selected="selected">test2</option>
+            <option value="test3" class="option option3">test3</option>
+        </select>
+        <input type="hidden" name="lang" value="en" />
+
+    </form>
+</div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.9.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['drag','mouseWheel']);
+
+    //selectWidget方法js开始
+    senro.selectWidget('senroSelect','icon','option_hover',2);
+    //selectWidget方法js结束
+
+    senro.selectWidget('senroSelect2','icon','option_hover');
+    //senro.cssTriangle($('.icon'),'down','15px','blue');
+    //alert($('#senroSelect1'));
+
+</script>
+</body>
+</html>

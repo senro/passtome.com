@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>toggleInput</title>
+    <style type="text/css">
+        .swf,.video{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .share{
+            width: 200px;
+            height: 50px;
+        }
+        .row{
+            position: relative;
+            height: 70px;
+        }
+        .msg,.input{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="row">
+        <input type="text" class="input" />
+        <input type="text" class="msg" value="请输入账号" />
+    </div>
+    <div class="row">
+        <input type="text" class="input" />
+        <input type="text" class="msg" value="请输入密码" />
+    </div>
+    <input type="submit" class="submit"/>
+</form>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.2.js"></script>
+<script type="text/javascript">
+    var senro=new Senro();
+
+    senro.toggleInput( $('.input'), $('.msg') );
+</script>
+</body>
+</html>

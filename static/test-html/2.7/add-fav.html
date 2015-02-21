@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+    <style type="text/css">
+        .btn{
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+<a class="btn" href="javascript:;">
+
+</a>
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    $('.btn').click(function(){
+        var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd':'Ctrl';
+        if(document.all)
+        {
+            window.external.addFavorite(window.location,document.title);
+        }
+        else if(window.sidebar)
+        {
+            window.sidebar.addPanel(document.title,window.location);
+        }
+        else{
+            alert('添加失败，请用Ctrl+D进行添加');
+        }
+    });
+    //加入收藏夹
+    function AddFavorite() {
+        var title = document.title;
+        var url = location.href;
+        if (window.sidebar) {
+            window.sidebar.addPanel(title, url, "");
+        } else if (document.all) {
+            window.external.AddFavorite(url, title);
+        } else {
+            //return true;
+        }
+    }
+</script>
+</body>
+</html>

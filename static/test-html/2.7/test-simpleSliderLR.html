@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>simpleSliderLR</title>
+    <meta name="description" content="Age of Wushu (AoW) is the world’s first true Wuxia themed MMORPG, with cutting edge graphics and innovative gameplay.
+Relive more than 2000 years of Wuxia tradition in Snail Games USA’s colossal MMORPG, Age of Wushu. In your journey to master the ancient Chinese art of Wushu,
+delve into your character’s unique story, face the consequences for every action, and fulfill your destiny.
+"/>
+    <meta name="keywords" content="Gold Snake Raiment,Age of Wushu,Age of Wulin,AoW,Age ,Wushu,Wulin"/>
+    <meta name="copyright" content="苏州蜗牛数字科技股份有限公司"/>
+    <meta name="author" content="584233821@qq.com(senro)"/>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/test-simpleSliderLR.css"/>
+
+</head>
+<body>
+<div class="bg">
+    <div class="container">
+        <div class="header">
+            <a class="logo" href="#" target="_blank"></a>
+        </div>
+        <div class="main">
+
+            <div class="mod Display">
+                <div class="mod-tit">Display</div>
+                <div class="mod-cont">
+                    <div class="video">
+                        <div id="video"></div>
+                    </div>
+                    <h2 class="h2">Item description:</h2>
+                    <p>
+                        It is made from rare gold boa scales and golden silk. It is indestructible. There is a legend in the West Regions that this item is of divine origin. Long ago, though, the Raiment was lost in the Central Plains and has not been seen for many years.
+                    </p>
+                    <h2 class="h2">Directions:</h2>
+                    <p>
+                        Purchase a Golden Snake Gift Bouquet. Use it to obtain the Lore “Gold Snake Raiment” and a headwear diagram. The headwear diagram is bound and permanent. The equipment modified by the drawing will also be bound.The Gold Snake Raiment has the Lore Skill “Starry Sky.” This will give the character an eye-catching fireworks aura!
+                    </p>
+                </div>
+            </div>
+
+            <div class="mod Features">
+                <div class="mod-tit">Features</div>
+                <div class="mod-cont clearfix">
+                    <div class="FeaturesTxt FeaturesTxt1">
+                        The Gold Snake Raiment is the first gold clothing set in Age of Wushu.
+                    </div>
+                    <div class="FeaturesTxt FeaturesTxt2">
+                        The headwear comes with the set but can be worn with any other set. Players can mix and match as they like.
+                    </div>
+                    <div class="FeaturesTxt FeaturesTxt3">
+                        Wearing gold clothes in the autumn is auspicious and can bring the player good luck!
+                    </div>
+                </div>
+            </div>
+
+            <div class="mod Screenshots">
+                <div class="mod-tit">Screenshots</div>
+                <div class="mod-cont">
+                    <a class="arrow arrowLeft" href="#"></a>
+                    <a class="arrow arrowRight" href="#"></a>
+                    <div class="slider">
+                        <div class="sliderWrap clearfix">
+                            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/1.jpg" />
+                            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/2.jpg" />
+                            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/3.jpg" />
+                            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/4.jpg" />
+                            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/5.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slider2-container">
+    <a class="arrow arrowLeft2" href="#"></a>
+    <a class="arrow arrowRight2" href="#"></a>
+    <div class="slider2">
+        <div class="sliderWrap2 clearfix">
+            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/1.jpg" />
+            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/2.jpg" />
+            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/3.jpg" />
+            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/4.jpg" />
+            <img class="ScreenshotsImg" src="../../images/test-simpleSliderLR/5.jpg" />
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://static.woniu.com/script/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/Senro.2.7.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var senro=new Senro('video'),
+                $slider=$('.sliderWrap'),
+                $arrowLeft=$('.arrowLeft'),
+                $arrowRight=$('.arrowRight'),
+                $slider2=$('.sliderWrap2'),
+                $arrowLeft2=$('.arrowLeft2'),
+                $arrowRight2=$('.arrowRight2');
+        //add video
+        senro.addVideo('video','../../video/snake.flv','../../video/snake.jpg',500,254);
+        //add slider
+        senro.simpleSliderLR($arrowLeft,$arrowRight,$slider,1);
+        senro.simpleSliderLR($arrowLeft2,$arrowRight2,$slider2,2,true);
+    });
+
+</script>
+<script type="text/javascript" src="http://static.woniu.com/js/ga.js"></script>
+</body>
+</html>

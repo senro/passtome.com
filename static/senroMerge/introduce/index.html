@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>html2css introduction</title>
+    <meta name="description" content="html2css,let you write emmet css in html!"/>
+    <meta name="keywords" content="html,css,emmet,html2css,senro,node,npm"/>
+    <meta name="copyright" content="senro.cn"/>
+    <meta name="author" content="584233821@qq.com(senro)"/>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+</head>
+<body>
+<div class="bg">
+    <div class="container">
+        <p class="questions">
+            是不是觉得写一大堆的css太浪费时间？<br/>
+            想在写html结构的同时也可以写css吗？<br/>
+            想写css也可以像写emmet结构那样，一句话全搞定吗？
+        </p>
+        <p class="slogan">
+            <a class="production" href="https://www.npmjs.org/package/html2css" target="_blank">html2css</a> 可以助你实现这个梦想！
+        </p>
+        <hr>
+        <div class="guide">
+            <span class="bold">目前版本：0.1.1</span><br/>
+            <span class="bold">使用方法：</span><br/>
+            <span class="bold">运行环境：</span>node<br/>
+            <span class="bold">安装方法：</span>$ npm install html2css<br/>
+            <span class="bold">使用示例：</span><br/>
+            var html2css=require('html2css').html2css;<br/>
+            html2css(<br/>
+            'D:/senro/node/static/test-html/exportCss/index-mod.html',&nbsp;&nbsp;&nbsp;&nbsp;<span class="script">//html路径</span><br/>
+            'D:/senro/node/static/test-html/exportCss/index-mod.css',&nbsp;&nbsp;&nbsp;&nbsp;<span class="script">//css导出路径</span><br/>
+            function(log){&nbsp;&nbsp;&nbsp;&nbsp;<span class="script">//回调返回导出日志字符串</span><br/>
+            console.log(log);<br/>
+            });<br/>
+            导出后，html2css会把你的html结构的data-css属性去掉，然后生成一个带-beforeExport后缀的html备份，同时把生成你定义的路径的css文件。
+        </div>
+        <hr>
+        <div class="rule">
+            <h2 class="h2 ruleTit">书写规则：</h2>
+            <p class="ruleIntro">
+                emmet css简写规则可以参照 : <a href="http://docs.emmet.io/cheat-sheet/" target="_blank">http://docs.emmet.io/cheat-sheet/</a>
+            </p>
+
+            1. 只需在html标签里加上data-css属性定义emmet格式的css即可，其中bg情况导出后会根据配置在图片名前加默认路径。如果data-css属性里没有值则只输出该类名。<br/>
+            <img src="images/rule1.png" alt=""/><br/>
+            2. 多个类的情况,如果不想定义第一个类就写个（）：<br/>
+            <img src="images/rule2.png" alt=""/><br/>
+            3. 如果有多个类，但没有多个括号，就默认css是第一个类的<br/>
+            <img src="images/rule3.jpg" alt=""/><br/>
+            4. 单个类的定义带注释和前缀情况，其中css不用加（）：<br/>
+            <img src="images/rule4.jpg" alt=""/><br/>
+            5. 多个类定义带注释和前缀的情况，其中 { 注释 } [ 前缀 ] （css命令）为一个完整的类信息组，括号没有顺序，只定义需要的就行，没有可以不写：<br/>
+            <img src="images/rule5.jpg" alt=""/><br/>
+            6. 多个类但信息组不对应，默认为从头开始依次对应，后面没有对应的css的类即默认为没有定义css<br/>
+            <img src="images/rule6.png" alt=""/><br/>
+            7. 支持定义hover样式，[ hover: css命令 ]
+            <img src="images/rule7.png" alt=""/><br/>
+            8. 支持对没有类名的标签进行定义css，但必须定义前缀，否则无效<br/>
+            <img src="images/rule8.png" alt=""/>
+        </div>
+        <div class="custom">
+            <h2 class="h2 customTit">自定义：</h2>
+            安装后可以找到模块里的 emmetDictionary.js 文件进行自定义配置，比如：默认单位，图片路径，css缩进，默认css模版，关键字，甚至emmet css 规则。
+        </div>
+        <div class="notice">
+            <h2 class="h2 noticeTit">注意：</h2>
+            1.html2css如果遇到不识别的关键字，不会报错，会在导出日志里显示未翻译的关键字，可以根据需要自定义该关键字。<br/>
+            2.html2css会在导出的css最前面，加上配置里的模版css，比如body的样式。<br/>
+        </div>
+        <div class="copyRight">
+            Senro Design<br/>
+            CopyRight&nbsp;&copy;&nbsp;
+            <a href="http://senro.cn/main.html" target="_self">senro.cn</a>&nbsp;&nbsp;
+            powerd by <a href="http://wpa.qq.com/msgrd?v=1&uin=584233821&site=qq&menu=yes" target="_blank">QiuYun</a><br/>
+            2013.12.27
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc4136ac89a5e1864545ff98d93e03bca' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

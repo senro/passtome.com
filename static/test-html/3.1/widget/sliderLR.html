@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="js,senro.js,senro.cn,sliderLR,senro sliderLR"/>
+    <meta name="description" content="senro.js, make fwd simple!"/>
+
+    <title>sliderLR</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+        }
+        /*sliderLR方法样式开始*/
+        .sliderLR{
+            position: relative;
+            width: /*bigWidth*/885px/*bigWidth*/;
+            padding: 10px;
+            background-color: /*sliderLRBg*/#1f1b18/*sliderLRBg*/;
+            overflow: hidden;
+        }
+        .sliderLRArrow{
+            position: absolute;
+            width: 28px;
+            height: 55px;
+            top: 50%;
+            margin-top: -23px;
+            /*background: url(/images/arrow.gif) no-repeat;*/
+            z-index: 5;
+            outline: none;
+        }
+        .sliderLRArrowLeft{
+            left: 10px;
+            background: url(/images/leftBtn.jpg) no-repeat;
+        }
+        .sliderLRArrowRight{
+            right: 10px;
+            background: url(/images/rightBtn.jpg) no-repeat;
+        }
+        /*大图*/
+        .sliderLRItemStag{
+            position: relative;
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图容器高度*/
+            margin: 34px auto 0 auto;
+            overflow: hidden;
+        }
+        .sliderLRItemWrap{
+            position: absolute;
+            width: 999999px;
+        }
+        .sliderLRItem{
+            float: left;
+            width: /*bigWidth*/885px/*bigWidth*/;/*大图宽度*/
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图高度*/
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+            outline: none;
+            position: static;
+        }
+        .sliderLRItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+        /*大图结束*/
+        /*缩略图*/
+        .sliderLRThumbs{
+            width: 100%;
+        }
+        .sliderLRThumbsStag{
+            position: relative;
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图容器高度*/
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .sliderLRThumbsWrap{
+            position: absolute;
+            width: 9999px;
+            margin-left: -5px;
+        }
+        .sliderLRThumbItem{
+            position: relative;
+            float: left;
+            width: /*smallWidth*/171px/*smallWidth*/;/*缩略图宽度*/
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图高度*/
+            /*border: 1px solid #fff;*/
+            margin-left: 5px;
+            outline: none;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .sliderLRThumbItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+        /*缩略图结束*/
+        .sliderLRThumb_current{
+            position: absolute;
+            border: 2px solid /*currentBorder*/#B06D02/*currentBorder*/;
+            z-index: 100;
+            overflow: hidden;
+        }
+        /*滚动条*/
+        .sliderLRScroll{
+            position: relative;
+            height: 13px;
+            margin-top: 10px;
+        }
+        .sliderLRScrollLine{
+            width: 100%;
+            height: 2px;
+            background-color: #5b4d33;
+            position: absolute;
+            top: 6px;
+            overflow: hidden;
+        }
+        .sliderLRScrollCube{
+            position: absolute;
+            width: 80px;
+            height: 13px;
+            background-color: /*scrollCube*/#ac905a/*scrollCube*/;
+            overflow: hidden;
+        }
+        /*滚动条结束*/
+        /*sliderLR方法样式结束*/
+        .sliderLR{
+            position: absolute;
+        }
+        /*视频*/
+        .video{
+            position: relative;
+            width: /*bigWidth*/885px/*bigWidth*/;
+            padding: 10px;
+            background-color: /*videoBg*/#1f1b18/*videoBg*/;
+            overflow: hidden;
+            left:1000px;
+        }
+        .video .sliderLRArrow{
+            position: absolute;
+            width: 28px;
+            height: 55px;
+            top: 50%;
+            margin-top: -23px;
+            /*background: url(/images/arrow.gif) no-repeat;*/
+            z-index: 5;
+            outline: none;
+        }
+        .video .sliderLRArrowLeft{
+            left: 10px;
+            background: url(/images/leftBtn.jpg) no-repeat;
+        }
+        .video .sliderLRArrowRight{
+            right: 7px;
+            background: url(/images/rightBtn.jpg) no-repeat;
+        }
+            /*大图*/
+        .video .sliderLRItemStag{
+            position: relative;
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图容器高度*/
+            margin: 34px auto 0 auto;
+            overflow: hidden;
+        }
+        .video .sliderLRItemWrap{
+            position: absolute;
+            width: 999999px;
+        }
+        .video .sliderLRItem{
+            float: left;
+            width: /*bigWidth*/885px/*bigWidth*/;/*大图宽度*/
+            height: /*bigHeight*/557px/*bigHeight*/;/*大图高度*/
+            color: #666;
+            text-decoration: none;
+            overflow: hidden;
+            outline: none;
+            position: static;
+        }
+        .video .sliderLRItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+            /*大图结束*/
+            /*缩略图*/
+        .video .sliderLRThumbs{
+            width: 100%;
+        }
+        .video .sliderLRThumbsStag{
+            position: relative;
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图容器高度*/
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .video .sliderLRThumbsWrap{
+            position: absolute;
+            width: 9999px;
+            margin-left: -5px;
+        }
+        .video .sliderLRThumbItem{
+            position: relative;
+            float: left;
+            width: /*smallWidth*/171px/*smallWidth*/;/*缩略图宽度*/
+            height: /*smallHeight*/108px/*smallHeight*/;/*缩略图高度*/
+            /*border: 1px solid #fff;*/
+            margin-left: 5px;
+            outline: none;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .video .sliderLRThumbItem img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: #ccc;
+        }
+            /*缩略图结束*/
+        .video .sliderLRThumb_current{
+            position: absolute;
+            border: 2px solid /*currentBorder*/#B06D02/*currentBorder*/;
+            z-index: 100;
+            overflow: hidden;
+        }
+            /*滚动条*/
+        .video .sliderLRScroll{
+            position: relative;
+            height: 13px;
+            margin-top: 10px;
+        }
+        .video .sliderLRScrollLine{
+            width: 100%;
+            height: 2px;
+            background-color: #5b4d33;
+            position: absolute;
+            top: 6px;
+            overflow: hidden;
+        }
+        .video .sliderLRScrollCube{
+            position: absolute;
+            width: 80px;
+            height: 13px;
+            background-color: /*scrollCube*/#ac905a/*scrollCube*/;
+            overflow: hidden;
+        }
+            /*滚动条结束*/
+    </style>
+
+</head>
+<body>
+
+<!--sliderLR方法结构开始-->
+<div class="sliderLR gallery">
+    <a class="sliderLRArrow sliderLRArrowLeft" href="javascript:;"></a>
+    <a class="sliderLRArrow sliderLRArrowRight" href="javascript:;"></a>
+    <div class="sliderLRItemStag">
+        <div class="sliderLRItemWrap clearfix">
+
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b1.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b2.jpg" title="B2C" />
+                B2C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b3.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b4.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b5.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b6.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b7.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b8.jpg" title="B1C" />
+                B1C
+            </a>
+            <a class="sliderLRItem" href="javascript:;">
+                <img src="/images/pics/1-b/b9.jpg" title="B1C" />
+                B1C
+            </a>
+
+        </div>
+    </div>
+
+    <div class="sliderLRThumbs">
+        <div class="sliderLRThumbsStag">
+            <div class="sliderLRThumbsWrap clearfix">
+
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b1.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b2.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b3.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b4.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b5.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b6.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b7.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b8.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b9.jpg" title="B1C" />
+                </a>
+
+            </div>
+        </div>
+
+        <div class="sliderLRScroll">
+            <div class="sliderLRScrollLine"></div>
+            <a class="sliderLRScrollCube" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+<!--sliderLR方法结构结束-->
+
+<!--视频图集开始-->
+<div class="sliderLR video">
+    <a class="sliderLRArrow sliderLRArrowLeft" href="javascript:;"></a>
+    <a class="sliderLRArrow sliderLRArrowRight" href="javascript:;"></a>
+    <div class="sliderLRItemStag">
+        <div class="sliderLRItemWrap clearfix">
+
+            <div class="sliderLRItem">
+                <div id="video1"></div>
+            </div>
+            <div class="sliderLRItem">
+                <div id="video2"></div>
+            </div>
+            <div class="sliderLRItem">
+                <div id="video3"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="sliderLRThumbs">
+        <div class="sliderLRThumbsStag">
+            <div class="sliderLRThumbsWrap clearfix">
+
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b1.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b2.jpg" title="B1C" />
+                </a>
+                <a class="sliderLRThumbItem" href="javascript:;">
+                    <img src="/images/pics/1-b/b3.jpg" title="B1C" />
+                </a>
+
+            </div>
+        </div>
+        <div class="sliderLRScroll">
+            <div class="sliderLRScrollLine"></div>
+            <a class="sliderLRScrollCube" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+<!--视频图集结束-->
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.3.1.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(['drag','mouseWheel','video']);
+//  sliderLR方法js开始
+    senro.sliderLR($('.gallery .sliderLRItemWrap'),$('.gallery .sliderLRArrowLeft'),$('.gallery .sliderLRArrowRight'),$('.gallery .sliderLRThumbsWrap'),null,null,$(".gallery .sliderLRScrollCube"),'sliderLRThumb_current');
+//  sliderLR方法js结束
+//    视频
+    senro.addVideo('video1','media/test.flv');
+    senro.addVideo('video2','media/test.flv');
+    senro.addVideo('video3','media/test.flv');
+    //senro.sliderLR($('.video .itemWrap'),$('.video .sliderLRArrowLeft'),$('.video .sliderLRArrowRight'),$('.video .thumbsWrap'),null,null,$( ".video .scrollCube"));
+    senro.sliderLR({
+        list:$('.video .sliderLRItemWrap'),
+        btn_l:$('.video .sliderLRArrowLeft'),
+        btn_r:$('.video .sliderLRArrowRight'),
+        thumbList:$('.video .sliderLRThumbsWrap'),
+        sliderCube:$( ".video .sliderLRScrollCube"),
+        current:'sliderLRThumb_current'
+    });
+
+</script>
+</body>
+</html>

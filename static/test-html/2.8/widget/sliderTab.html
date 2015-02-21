@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>sliderTab</title>
+    <link rel="stylesheet" type="text/css" href="http://static.woniu.com/stylesheets/base.css"/>
+    <style type="text/css">
+        .weibo {
+            height: 306px;
+            margin: 0 auto 16px;
+            overflow: hidden;
+            width: 215px;
+        }
+        .weiboBtn-sina {
+            background-color: red;
+            border-right: 1px solid #DBBC8F;
+        }
+        .weiboBtn {
+            background-color: blue;
+            color: #754400;
+            float: left;
+            height: 35px;
+            line-height: 35px;
+            text-decoration: none;
+            text-indent: 37px;
+            width: 106px;
+        }
+        .weiboBtn :hover{
+            background-color: green;
+        }
+        .weiboCont {
+            background-color: #EAD9C0;
+            float: left;
+            height: 271px;
+            width: 214px;
+        }
+        .current{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="weibo clearfix">
+    <a class="weiboBtn weiboBtn-sina iePng" href="javascript:;">新浪微博</a>
+    <a class="weiboBtn weiboBtn-tencent" href="javascript:;">腾讯微博</a>
+    <div class="weiboCont">
+        新浪微博
+    </div>
+    <div class="weiboCont">
+        腾讯微博
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.8.js"></script>
+<script type="text/javascript">
+    var senro=new Senro(),
+        $weiboModBtn=$('.weiboBtn'),
+        $weiboModCont=$('.weiboCont');
+    senro.sliderTab($weiboModBtn,$weiboModCont,'current');
+</script>
+</body>
+</html>

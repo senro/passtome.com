@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <title>marquee</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/test-marquee.css"/>
+</head>
+<body>
+
+<div class="infos-cont-cont">
+    <a href="javascript:;" id="arrow-up" class="arrow arrow-up"></a>
+    <div class="prizeList-cont" id="MarqueeDiv">
+        <table id="listTable" class="listTable">
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>1</td><td>1</td>
+            </tr>
+        </table>
+    </div>
+    <a href="javascript:;" id="arrow-down" class="arrow arrow-down"></a>
+</div>
+<div class="box2">
+    <a href="javascript:;" id="arrow-left" class="arrow2 arrow-left"></a>
+    <div class="MarqueeContainer2" id="MarqueeDiv2">
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <!--<img src="/images/btn.jpg" width="150px" height="50px" border="0" />-->
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+    <a href="javascript:;" id="arrow-right" class="arrow2 arrow-right"></a>
+</div>
+<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/Senro.2.8.js"></script>
+<script type="text/javascript">
+    var senro=new Senro('MSClass');
+
+    senro.marquee('MarqueeDiv','top',$('.arrow-down'),$('.arrow-up'));
+    senro.marquee('MarqueeDiv2','right',$('.arrow-left'),$('.arrow-right'));
+</script>
+</body>
+</html>
