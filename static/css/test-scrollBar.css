@@ -1,0 +1,69 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: qiuyun
+ * Date: 13-8-14
+ * Time: 下午3:58
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    background-color: #f1f1f1;
+    font: 12px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+    background: url(../images/qy-iframe-bg.jpg) no-repeat left top;
+    background-attachment: fixed;
+    color: #3c4256;
+}
+.container {
+    width: 763px;
+    padding: 20px 20px 40px 20px;
+    position: absolute;
+}
+.container-wrap{
+    position: relative;
+    width: 828px;
+    height: 392px;
+    overflow: hidden;
+}
+.back{
+    text-align: right;
+    color: #922807;
+    background: url("../images/arrow.gif") no-repeat scroll 683px center transparent;
+}
+.backLink{
+    color: #922807;
+    text-decoration: none;
+}
+.backLink:hover{
+    color: #922807;
+    text-decoration: underline;
+}
+.tit{
+    height: 32px;
+    line-height: 32px;
+    font-size: 27px;
+    color: #922807;
+    text-align: center;
+}
+.cont{
+    line-height: 25px;
+    margin-top: 13px;
+}
+.scrollContainer{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 25px;
+    height: 392px;
+    background: url("../images/scroll-bg.jpg") no-repeat scroll 0 0 transparent;
+}
+.scrollCube{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 24px;
+    height: 106px;
+    background: url("../images/scroll-cube.gif") no-repeat scroll center top #444242;
+}
+.hr{
+    border-top: 1px solid #a3a4a7;
+    border-bottom: 1px solid #fafaf9;
+}

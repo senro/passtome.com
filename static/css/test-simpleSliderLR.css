@@ -1,0 +1,142 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: qiuyun
+ * Date: 13-10-15
+ * Time: 下午1:50
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    background-color: #f1f1f1;
+    font: 12px/1.5 arial, sans-serif;
+    color: #000;
+}
+
+.bg {
+    min-width: 984px;
+    background:#300000 url(../images/test-simpleSliderLR/bg.jpg) no-repeat center top;
+}
+
+.container {
+    width: 984px;
+    margin: 0 auto;
+    padding-bottom: 228px;
+}
+.header{
+    height: 406px;
+}
+.logo{
+    display: block;
+    width: 240px;
+    height: 124px;
+}
+.main{
+    width: 671px;
+    margin: 0 auto;
+    text-decoration: underline;
+}
+
+.mod{
+    margin: 0 auto;
+}
+.mod-tit{
+    height: 35px;
+    line-height: 35px;
+    background: #970000 url(../images/test-simpleSliderLR/mod-tit.jpg) no-repeat right center;
+    color: #ebcdb6;
+    font-size: 25px;
+    font-weight: bold;
+    text-indent: 18px;
+}
+.mod-cont{
+    margin-top: 7px;
+}
+.slider2-container{
+    width: 1340px;
+    margin-left: 200px;
+    position: relative;
+}
+.slider2{
+    position: relative;
+    width: 1340px;
+    height: 427px;
+    overflow: hidden;
+}
+.Display{
+    width: 580px;
+    margin: 24px auto 0;
+}
+.video{
+    width: 500px;
+    height: 254px;
+    margin: 16px auto 0;
+    background-color: #000;
+    overflow: hidden;
+}
+.h2{
+    color: #990000;
+    margin-top: 22px;
+    font-weight: bold;
+}
+.Features{
+    margin-top: 18px;
+}
+.FeaturesTxt{
+    float: left;
+    width: 217px;
+    height: 80px;
+    margin-left: 10px;
+    background: url(../images/test-simpleSliderLR/FeaturesTxtBg.jpg);
+    color: #ebcdb6;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 10px;
+}
+.FeaturesTxt1{
+    margin-left: 0;
+}
+.Screenshots{
+    margin-top: 10px;
+}
+.Screenshots .mod-cont{
+    position: relative;
+}
+.slider{
+    position: relative;
+    width: 670px;
+    height: 427px;
+    overflow: hidden;
+}
+.sliderWrap,.sliderWrap2{
+    position: absolute;
+    width: 9999px;
+    height: 427px;
+}
+.ScreenshotsImg{
+    float: left;
+    width: 670px;
+    height: 427px;
+}
+.arrow{
+    background: url(../images/test-simpleSliderLR/arrow.gif) no-repeat 0 0;
+    cursor: pointer;
+    height: 85px;
+    position: absolute;
+    top: 179px;
+    width: 50px;
+    display: block;
+    outline: none;
+}
+.arrowLeft,.arrowLeft2 {
+    background-position: left top;
+    left: -63px;
+}
+.arrowRight,.arrowRight2 {
+    background-position: right top;
+    right: -63px;
+}
+.arrowRight:hover,.arrowRight2:hover {
+    background-position: right bottom;
+}
+.arrowLeft:hover,.arrowLeft2:hover {
+    background-position: left bottom;
+}

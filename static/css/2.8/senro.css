@@ -1,0 +1,90 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: qiuyun
+ * Date: 13-9-12
+ * Time: 下午4:30
+ * To change this template use File | Settings | File Templates.
+ */
+.senroSelect{
+    position: relative;
+    width: 98px;
+    height: 18px;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: 1px solid #828177;
+    border-top: 1px solid #828177;
+    border-right: 1px solid #F9F8F3;
+    border-bottom: 1px solid #F9F8F3;
+}
+.senroSelect-cont{
+    position: absolute;
+    width: 98px;
+    background-color: #fff;
+    font-size: 14px;
+}
+.senroSelect-cont a{
+    display: block;
+    text-decoration: none;
+}
+.senroSelect-icon{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #90aae4;
+    right: 1px;
+    top: 2px;
+    background-color: #b6d1fb;
+    overflow: hidden;
+    z-index: 2;
+    outline: none;
+}
+
+.senroSelect-icon:hover{
+    background-color: #C0E4FC;
+}
+.senroSelected{
+    padding: 1px 0 1px 4px;
+    cursor: default;
+    color:#000;
+    text-decoration: none;
+}
+.senroOption{
+    color:#000;
+    background-color: #fff;
+    display: block;
+    text-decoration: none;
+}
+.senroOption:hover,.senroOption_hover{
+    background-color: #316ac5;
+    cursor: default;
+}
+/*select滚动条*/
+.senroOptions{
+    position: relative;
+}
+.senroOptionsWrap{
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
+.senroSelectScrollLine{
+    position: absolute;
+    width: 25px;
+    right: 0;
+    top:0;
+    background-color: #999;
+    z-index: 100;
+    overflow: hidden;
+}
+.senroSelectScrollCube{
+    position: absolute;
+    width: 25px;
+    right: 0;
+    top:0;
+    background-color: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+.senroOptions{
+    overflow: hidden;
+}

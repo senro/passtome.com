@@ -1,0 +1,95 @@
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.senroEasyArkNav{
+    position: fixed;
+    left: 50%;
+    margin-left: -258px;
+    bottom: -35px;
+    z-index:1000;
+}
+.senroEasyArkNavArrow{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -70px;
+    left: 50%;
+    margin-left: -35px;
+    background: url(http://senro.cn/senroEasyArk/images/navIcon.png) no-repeat center bottom;
+}
+.easyArkNavBtn{
+    text-decoration:none;
+    float: left;
+    top: 0;
+    background-color: red;
+    color: #fff !important;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+}
+.easyArkNavBtn:hover{
+    background-color: #ff6232;
+    color: #fff !important;
+    text-decoration: none;
+}
+.logBox{
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 450px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.logBox .tit {
+    background-color: #333333;
+    color: #FFFFFF;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.logBox .cont {
+    height: 370px;
+    line-height: 22px;
+    overflow-y: scroll;
+    padding: 15px;
+}
+.logBox .close{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    right: 0;
+    top:0;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+.logBox .close:hover{
+    background-color: #ff6232;
+    color: #fff !important;
+    text-decoration: none;
+}
+.disListTable{
+    width: 100%;
+    margin: 0 auto;
+}
+.disListTable .disListTableTit{
+    text-align: center;
+}
+.disListTable th{
+    padding: 5px;
+    text-align: right;
+}
+.disListTable td{
+    text-align: left;
+    padding: 5px 20px;
+}

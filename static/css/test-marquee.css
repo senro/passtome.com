@@ -1,0 +1,77 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: qiuyun
+ * Date: 13-7-24
+ * Time: 下午5:24
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    color: #c5ba78;
+    background-color: #000;
+    font: 12px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+}
+
+#MarqueeDiv table{
+    margin: 0 auto;
+    text-align: center;
+}
+.listTable td{
+    width: 79px;
+    height: 22px;
+}
+.infos-cont-cont{
+}
+.prizeList-cont{
+    height: 230px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+.arrow{
+    display: block;
+    height: 20px;
+    background: url(../images/arrow.gif) no-repeat center center;
+    margin-top: 22px;
+    outline: none;
+}
+.arrow-up{
+    background-position: center 0;
+}
+.arrow-up:hover{
+    background-position: center -38px;
+}
+.arrow-down{
+    background-position: center -18px;
+}
+.arrow-down:hover{
+    background-position: center -56px;
+}
+.box2{
+    width: 862px;
+    height: 100px;
+    border:1px solid #fff;
+}
+.arrow2{
+    float: left;
+    display: block;
+    width: 30px;
+    height: 20px;
+    background-color: #fff;
+}
+.MarqueeContainer2{
+    float: left;
+    width: 800px;
+    height: 50px;
+    border:1px solid #fff;
+    overflow: hidden;
+}
+.MarqueeContainer2 ul{
+    width: 1771px;
+}
+.MarqueeContainer2 ul li{
+    float: left;
+    width: 149px;
+    height: 50px;
+    margin-left: 10px;
+    border:1px solid #555;
+    background-color: green;
+}

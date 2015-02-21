@@ -1,0 +1,157 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: qiuyun
+ * Date: 13-11-15
+ * Time: 下午5:22
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    background-color: #fff;
+    font: 14px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+}
+.arial{
+    font-family: arial, sans-serif;
+}
+.bg {
+    min-width: 960px;
+    background: url(../images/background.png) repeat;
+}
+.container{
+    width: 1250px;
+}
+.logo{
+    display: block;
+    color: #44c0f1;
+    text-decoration: none;
+}
+.export{
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+.export:hover{
+    color: #848484;
+}
+/*aside*/
+.aside{
+    float: left;
+    width: 271px;
+    border-right: 1px solid #000;
+}
+.aside-tit{
+    padding-top: 15px;
+    height: 71px;
+    line-height: 27px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    font-size: 22px;
+}
+.aside-cont{
+    padding: 15px;
+    overflow-y: scroll;
+    position: relative;
+}
+.firstClass{
+    margin-bottom: 10px;
+}
+.firstClass-name{
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+}
+.secClass{
+    width: 204px;
+    margin-left: 20px;
+    list-style: disc;
+    position: relative;
+}
+.secClassLink{
+    font-size: 14px;
+    text-decoration: none;
+    /*text-indent: 15px;*/
+    color: #000;
+    font-family: arial, sans-serif;
+}
+.secClassLink:hover{
+    text-decoration: underline;
+}
+/*main*/
+.main{
+    float: left;
+    padding: 86px 0 0 60px;
+    width: 917px;
+}
+.info{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4B0;
+}
+.name{
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.value{
+    font-weight: normal;
+    color: #000;
+    display: block;
+}
+.example-value{
+    display: inline;
+    color: red;
+}
+.positionLink{
+    color: #000;
+}
+.valueLink{
+    color: #000;
+    text-decoration: none;
+}
+.valueLink:hover{
+    text-decoration: underline;
+}
+.listPageHr{
+    border-width: 0 0 1px 0;
+    border-style: none none dashed none;
+    border-color: #999;
+}
+.map{
+    color: #000;
+}
+.catLink{
+    color: #000;
+    text-decoration: none;
+}
+.catLink:hover{
+    text-decoration: underline;
+}
+.list-method{
+    color: #4B0;
+    text-decoration: none;
+}
+.list-method:hover{
+    text-decoration: underline;
+}
+/*checkBox*/
+.checkBox{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    margin: 0;
+}
+/*.methodCheckBox{*/
+    /*right: 5px;*/
+/*}*/
+.toggleAllText,.ifCompressText{
+    font-size: 12px;
+}
+.footer{
+    height: 100px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 100px;
+}
+.footer a{
+    color: #000;
+}

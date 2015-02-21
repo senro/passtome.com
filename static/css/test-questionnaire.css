@@ -1,0 +1,178 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: qiuyun
+ * Date: 13-12-23
+ * Time: 下午7:13
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    background-color: #fcfcf9;
+    font: 14px/1.5 "microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif;
+    color: #330000;
+}
+a{
+    color: #330000;
+    text-decoration: none;
+}
+.bg {
+    min-width: 897px;
+    background: url(../images/test-questionnaire/bg.jpg) no-repeat center top;
+}
+.container {
+    width: 897px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.header{
+    height: 531px;
+    overflow: hidden;
+}
+.logo{
+    display: block;
+    width: 322px;
+    height: 98px;
+    margin: 0 0 0 6px;
+}
+.loginBox{
+    width: 131px;
+    height: 73px;
+    margin: 119px 0 0 485px;
+    font-weight: bold;
+    text-align: center;
+}
+.afterLogin{
+    display: none;
+}
+.loginBtn{
+    display: block;
+    width: 126px;
+    height: 40px;
+    margin: 0 auto;
+    background: url(../images/test-questionnaire/loginBtn.jpg) no-repeat;
+}
+.slogan{
+    width: 434px;
+    height: 125px;
+    margin: 70px 0 0 24px;
+}
+.sloganInfo{
+    margin-top: 20px;
+    font-weight: bold;
+}
+.question{
+    width: 568px;
+    margin-top: 40px;
+}
+.question-tit{
+    height: 30px;
+    line-height: 30px;
+}
+.question-answers{
+}
+.question-answer{
+    padding-left: 17px;
+    background: url(../images/test-questionnaire/radioIcon.gif) no-repeat left center;
+    margin: 0 0 0 22px;
+    height: 21px;
+    overflow: hidden;
+    display: inline-block;
+}
+.question-answer_selected{
+    background: url(../images/test-questionnaire/radioIcon-hover.gif) no-repeat left center;
+}
+.multiAnswer{
+    padding-left: 17px;
+    margin: 0 0 0 22px;
+    height: 21px;
+    overflow: hidden;
+    display: inline-block;
+    background: url(../images/test-questionnaire/multiAnswer.gif) no-repeat left center;
+}
+.multiAnswer_selected{
+    background: url(../images/test-questionnaire/multiAnswer-hover.gif) no-repeat left center;
+}
+.other{
+    clear: left;
+    padding: 10px 0 0 21px;
+}
+.formBox{
+    width: 587px;
+    border: 1px dashed #eae9e1;
+    margin-top: 36px;
+}
+.formBoxTit{
+    height: 45px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #e1e0d5;
+    color: #999;
+    padding-top: 5px;
+}
+.bold{
+    font-weight: bold;
+}
+.black{
+    color: #000;
+}
+.formBoxCont{
+    padding: 25px 0 25px 0;
+}
+.row{
+    margin-top: 12px;
+}
+.firstRow{
+    margin-top: 0;
+}
+.rowLeft{
+    float: left;
+    width: 173px;
+    text-align: right;
+    height: 25px;
+    line-height: 25px;
+}
+.rowRight{
+    float: left;
+    padding-left: 13px;
+}
+.select{
+    width: 250px;
+    height: 25px;
+    background-color: #fff;
+    border:1px solid #d8d8d8
+}
+.select-icon{
+    width: 23px;
+    height: 21px;
+    background: url(../images/test-questionnaire/selectIcon.jpg) no-repeat;
+}
+.formInput{
+    width: 240px;
+    height: 15px;
+    padding: 5px;
+    background-color: #fff;
+    border:1px solid #d8d8d8;
+    font-size: 12px;
+}
+.validateInput{
+    float: left;
+    width: 160px;
+}
+.validataImg{
+    float: left;
+    width: 84px;
+    height: 35px;
+    margin: 0 0 0 10px;
+}
+.submitBtn{
+    width: 126px;
+    height: 40px;
+    margin: 28px 0 0 240px;
+    background: url(../images/test-questionnaire/submitBtn.jpg) no-repeat;
+    display: block;
+}
+.orange{
+    color: #e6813e;
+}
+.cl{
+    clear: left;
+}
